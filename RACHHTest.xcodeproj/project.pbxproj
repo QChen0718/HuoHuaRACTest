@@ -22,6 +22,7 @@
 		A1D68B0022C5C31000D95029 /* HHBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68AFF22C5C31000D95029 /* HHBaseModel.m */; };
 		A1D68B0422C5DFFB00D95029 /* HHResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68B0322C5DFFB00D95029 /* HHResponse.m */; };
 		A1D68B0922C5E72A00D95029 /* NSString+HHCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68B0822C5E72A00D95029 /* NSString+HHCategory.m */; };
+		A1D68B1122C6295000D95029 /* HHLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68B1022C6295000D95029 /* HHLoginModel.m */; };
 		D56213B7D2C369ADF7FA1E88 /* Pods_RACHHTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE91DB82135CFF382E47300 /* Pods_RACHHTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,8 @@
 		A1D68B0522C5E2A200D95029 /* HHHTTPServiceConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHTTPServiceConstant.h; sourceTree = "<group>"; };
 		A1D68B0722C5E72A00D95029 /* NSString+HHCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HHCategory.h"; sourceTree = "<group>"; };
 		A1D68B0822C5E72A00D95029 /* NSString+HHCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HHCategory.m"; sourceTree = "<group>"; };
+		A1D68B0F22C6295000D95029 /* HHLoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHLoginModel.h; sourceTree = "<group>"; };
+		A1D68B1022C6295000D95029 /* HHLoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHLoginModel.m; sourceTree = "<group>"; };
 		CE8FA99D9C8733AD5EAFB7F1 /* Pods-RACHHTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACHHTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACHHTest/Pods-RACHHTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -313,6 +316,8 @@
 		A1D68B0C22C6128500D95029 /* HHLoginModel */ = {
 			isa = PBXGroup;
 			children = (
+				A1D68B0F22C6295000D95029 /* HHLoginModel.h */,
+				A1D68B1022C6295000D95029 /* HHLoginModel.m */,
 			);
 			path = HHLoginModel;
 			sourceTree = "<group>";
@@ -520,6 +525,7 @@
 				A1D68ADB22C4BD8D00D95029 /* HHURLParameters.m in Sources */,
 				A1D68AEE22C5A87800D95029 /* UIWindow+HHHierarchy.m in Sources */,
 				A1D68AF122C5AE1500D95029 /* UIView+HHHierarchy.m in Sources */,
+				A1D68B1122C6295000D95029 /* HHLoginModel.m in Sources */,
 				A1D68B0022C5C31000D95029 /* HHBaseModel.m in Sources */,
 				A1D68B0922C5E72A00D95029 /* NSString+HHCategory.m in Sources */,
 				A1D68B0422C5DFFB00D95029 /* HHResponse.m in Sources */,
