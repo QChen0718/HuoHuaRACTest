@@ -11,7 +11,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HHBaseView : UIView <HHViewProtocol>
-
+/// The `View` willAppearSignal
+@property (nonatomic, readwrite, strong) RACSubject *willAppearSignal;
+/// The `View` didAppearSignal
+@property (nonatomic, readwrite, strong) RACSubject *didAppearSignal;
+/// The `View` willDisappearSignal
+@property (nonatomic, readwrite, strong) RACSubject *willDisappearSignal;
+/// The `View` viewDidDisappearSignal
+@property (nonatomic, readwrite, strong) RACSubject *didDisappearSignal;
 @end
 
 NS_ASSUME_NONNULL_END
