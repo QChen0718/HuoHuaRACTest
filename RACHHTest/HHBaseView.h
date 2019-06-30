@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HHViewProtocol.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HHBaseView : UIView
+@interface HHBaseView : UIView <HHViewProtocol>
 
 @end
 
