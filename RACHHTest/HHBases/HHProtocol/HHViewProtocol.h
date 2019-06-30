@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol HHViewModelProtocol;
 
 @protocol HHViewProtocol <NSObject>
+
+@optional
 /**
  *  初始化并绑定ViewModel
  */
