@@ -109,4 +109,14 @@
     return resData;
 }
 
+
+- (UIViewController *)stringChangeToClass:(NSString *)str
+{
+    id vc = [[NSClassFromString(str) alloc]init];
+    if ([vc isKindOfClass:[UIViewController class]]) {
+        return vc;
+    }
+    return nil;
+}
+
 @end

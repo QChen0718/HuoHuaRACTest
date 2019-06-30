@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
  @return HtmlString
  */
 + (NSString *)utf8String:(NSData *)data;
+
+//通过控制器名称获得控制器
+- (UIViewController *)stringChangeToClass:(NSString *)str ;
 @end
 
 NS_ASSUME_NONNULL_END

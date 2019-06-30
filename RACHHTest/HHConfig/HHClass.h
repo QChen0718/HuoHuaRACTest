@@ -15,4 +15,5 @@
 #import "HHDevice.h"
 #import "HHBaseModel.h"
 #import "NSString+HHCategory.h"
+#import "HHBaseView.h"
 #endif /* HHClass_h */

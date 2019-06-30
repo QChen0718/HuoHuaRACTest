@@ -104,6 +104,7 @@ static HHHttpservice * _service = nil;
             dispatch_async(self.completionQueue ?: dispatch_get_main_queue(), ^{
                 //发送错误信号
                 [subscriber sendError:serialiaztionError];
+                [subscriber sendCompleted];
             });
 #pragma clang diagnostic pop
             return [RACDisposable disposableWithBlock:^{
