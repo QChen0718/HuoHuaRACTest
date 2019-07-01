@@ -163,7 +163,7 @@ static HHHttpservice * _service = nil;
 - (RACSignal *)parsedResponseOfClass:(Class)resultClass responseObject:(id)responseObject
 {
     /// resultClass必须是HHBaseModel的子类 且 responseObject最外层必须是字典
-    NSParameterAssert(resultClass == nil && [resultClass isKindOfClass:[HHBaseModel class]]);
+    NSParameterAssert(resultClass == nil || [resultClass isSubclassOfClass:HHBaseModel.class]);
     __block Class _resultClass = resultClass;
     __block id _responseObject = responseObject;
     /// 解析
@@ -178,7 +178,7 @@ static HHHttpservice * _service = nil;
                     return [RACDisposable disposableWithBlock:^{}];
                 }
                 ///有传模型进来
-                id parsedObject = [_resultClass hh_modelWithDictionary:_responseObject];
+                id parsedObject = [_resultClass hh_modelWithDictionary:responseModel.body];
                 /// 确保解析出来是HHBaseModel的子类
                 NSAssert([parsedObject isKindOfClass:HHBaseModel.class], @"Parsed model object is not an BaseModel: %@", parsedObject);
                 [subscriber sendNext:parsedObject];

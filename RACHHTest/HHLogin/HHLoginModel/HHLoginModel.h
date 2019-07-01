@@ -60,6 +60,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (HHLoginModel *)shareUser;
 
 -(void)saveUser;
+
+-(void)deleteUser;
+
++ (instancetype)userFromFile;
 @end
 
 NS_ASSUME_NONNULL_END

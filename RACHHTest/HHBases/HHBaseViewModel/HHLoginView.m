@@ -26,6 +26,8 @@
     self.frame=[[UIScreen mainScreen]bounds];
     [self createUI];
     [self setuiFrame];
+    RAC(self.loginviewModel,phone)=self.phonetextField.rac_textSignal;
+    RAC(self.loginviewModel,password)=self.passwordtextField.rac_textSignal;
 }
 - (void)hh_bindViewModel
 {
