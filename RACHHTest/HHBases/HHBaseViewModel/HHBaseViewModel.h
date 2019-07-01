@@ -37,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readwrite, strong) RACSubject *willDisappearSignal;
 /// The `View` viewDidDisappearSignal
 @property (nonatomic, readwrite, strong) RACSubject *didDisappearSignal;
+
 @end
 
 NS_ASSUME_NONNULL_END

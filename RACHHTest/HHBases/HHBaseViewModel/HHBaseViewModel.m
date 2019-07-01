@@ -70,6 +70,7 @@
     return self;
 }
 #pragma mark - 同步controller的生命周期
+
 - (RACSubject *)willAppearSignal {
     if (!_willAppearSignal) _willAppearSignal = [RACSubject subject];
     return _willAppearSignal;

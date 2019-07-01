@@ -12,4 +12,8 @@
 
 /// 请求成功responseCode值
 #define HHHTTPResponseCodeSuccess           @"0"
+/// POST请求
+#define HHHTTPRequestMethodPost             @"POST"
+/// GET请求
+#define HHHTTPRequestMethodGet              @"GET"
 #endif /* HHHTTPServiceConstant_h */

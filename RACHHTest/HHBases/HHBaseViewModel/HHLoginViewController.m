@@ -7,26 +7,39 @@
 //
 
 #import "HHLoginViewController.h"
-
+#import "HHLoginView.h"
+#import "HHLoginViewModel.h"
 @interface HHLoginViewController ()
-
+@property (nonatomic,strong)HHLoginView *loginview;
+@property (nonatomic,strong)HHLoginViewModel *loginviewModel;
 @end
 
 @implementation HHLoginViewController
 
+
+- (HHLoginViewModel *)loginviewModel
+{
+    if (!_loginviewModel) {
+        _loginviewModel = [[HHLoginViewModel alloc]initWithTarget:self];
+    }
+    return _loginviewModel;
+}
+
+- (HHLoginView *)loginview
+{
+    if (!_loginview) {
+        _loginview = [[HHLoginView alloc]initWithViewModel:self.loginviewModel];
+    }
+    return _loginview;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.view addSubview:self.loginview];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
 
 @end

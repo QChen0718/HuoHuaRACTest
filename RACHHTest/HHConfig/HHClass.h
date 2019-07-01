@@ -15,5 +15,7 @@
 #import "HHDevice.h"
 #import "HHBaseModel.h"
 #import "NSString+HHCategory.h"
+#import "NSString+SHA256.h"
 #import "HHBaseView.h"
+#import "HHLoginModel.h"
 #endif /* HHClass_h */
