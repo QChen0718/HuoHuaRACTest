@@ -9,10 +9,13 @@
 #import "HHHomeView.h"
 #import "HHHomeViewModel.h"
 #import "HHHomeTableViewCell.h"
+#import "HHHomeModel.h"
+#import "HHHomeListModel.h"
 #define KCELLID @"kcellid"
 
 @interface HHHomeView ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,readwrite,strong)HHHomeViewModel *homeviewModel;
+@property (nonatomic,strong)NSMutableArray *sumModelArray;
 @property (nonatomic,strong)UITableView *tableview;
 @property (nonatomic,assign)NSInteger pageNum;
 @property (nonatomic,assign)NSInteger pageSize;
@@ -29,18 +32,22 @@
 {
     self.pageNum=0;
     self.pageSize=10;
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
-    [dict setObject:@(self.pageNum) forKey:@"pageNum"];
-    [dict setObject:@(self.pageSize) forKey:@"pageSize"];
-    [self.homeviewModel.homelistCommand execute:dict];
+    self.sumModelArray = [[NSMutableArray alloc]init];
     [self addSubview:self.tableview];
 }
 - (void)hh_bindViewModel
 {
+    //必须是先订阅在执行
     //订阅
-    [self.homeviewModel.homelistCommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
-        
+    [self.homeviewModel.homelistCommand.executionSignals.switchToLatest subscribeNext:^(HHHomeModel *homemodel) {
+        [self.sumModelArray addObjectsFromArray: homemodel.list];
+        [self.tableview reloadData];
     }];
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
+    [dict setObject:@(self.pageNum) forKey:@"pageNum"];
+    [dict setObject:@(self.pageSize) forKey:@"pageSize"];
+    //执行
+    [self.homeviewModel.homelistCommand execute:dict];
 }
 
 - (UITableView *)tableview
@@ -62,11 +69,13 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return self.sumModelArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     HHHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:KCELLID forIndexPath:indexPath];
+    HHHomeListModel *listmodel = self.sumModelArray[indexPath.row];
+    cell.textLabel.text=listmodel.talkerName;
     return cell;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section

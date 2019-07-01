@@ -9,5 +9,8 @@
 #import "HHHomeModel.h"
 
 @implementation HHHomeModel
-
++ (NSDictionary *)hh_objectClassInArray
+{
+    return @{@"list":[HHHomeListModel class]};
+}
 @end

@@ -15,7 +15,7 @@ static HHHttpservice * _service = nil;
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _service =  [[self alloc] initWithServerBaseURL:[NSURL URLWithString:nil]];
+        _service =  [[self alloc] init];
         /// 设置允许接收请求返回的数据格式类型
         _service.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:
                                                               @"text/plain",

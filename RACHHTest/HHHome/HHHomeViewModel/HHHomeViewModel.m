@@ -38,9 +38,7 @@
             [subscriber sendError:error];
             [subscriber sendCompleted];
         }];
-        return [RACDisposable disposableWithBlock:^{
-            
-        }];
+        return [RACDisposable disposableWithBlock:^{}];
     }];
 }
 
