@@ -8,6 +8,7 @@
 
 #import "HHLoginView.h"
 #import "HHLoginViewModel.h"
+#import "HHHomeViewController.h"
 @interface HHLoginView ()
 @property (nonatomic,strong)UITextField *phonetextField;
 @property (nonatomic,strong)UITextField *passwordtextField;
@@ -32,7 +33,9 @@
 - (void)hh_bindViewModel
 {
     [self.loginviewModel.loginCommand.executionSignals.switchToLatest subscribeNext:^(HHLoginModel *user) {
-        
+        NSLog(@"%@",user);
+        [user saveUser];
+        [self.hh_viewController.navigationController pushViewController:[[HHHomeViewController alloc]init] animated:YES];
     }];
 }
 - (void)createUI{
@@ -70,6 +73,7 @@
     if (!_phonetextField) {
         _phonetextField = [[UITextField alloc]init];
         _phonetextField.placeholder=@"请输入手机号";
+        _phonetextField.keyboardType=UIKeyboardTypeNumberPad;
         _phonetextField.font =[UIFont systemFontOfSize:15];
     }
     return _phonetextField;

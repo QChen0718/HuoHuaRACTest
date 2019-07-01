@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HHLoginViewController.h"
+#import "HHNavigationViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,7 +20,8 @@
     // Override point for customization after application launch.
     self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setBackgroundColor:[UIColor whiteColor]];
-    self.window.rootViewController=[[HHLoginViewController alloc]init];
+    HHNavigationViewController *NVC=[[HHNavigationViewController alloc]initWithRootViewController:[[HHLoginViewController alloc]init]];
+    self.window.rootViewController=NVC;
     [self.window makeKeyAndVisible];
     return YES;
 }

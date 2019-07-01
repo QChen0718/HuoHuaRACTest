@@ -13,4 +13,6 @@
 #define kAudioUnifiedUrl           @"http://apiaudio.huohuacity.com/"
 ///登录接口
 #define kLogin                  @"account/baseuser/login"
+//音频列表
+#define kAudioListUrl           @"audio/list.do"
 #endif /* HHAPI_h */

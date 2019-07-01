@@ -15,7 +15,7 @@ static HHHttpservice * _service = nil;
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _service = [[self alloc]init];
+        _service =  [[self alloc] initWithServerBaseURL:[NSURL URLWithString:nil]];
         /// 设置允许接收请求返回的数据格式类型
         _service.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:
                                                               @"text/plain",
@@ -29,6 +29,9 @@ static HHHttpservice * _service = nil;
         _service.requestSerializer                         = [AFJSONRequestSerializer serializer];
         /// 超时时间
         _service.requestSerializer.timeoutInterval         = 40;
+        
+        // 加密类型
+        [_service.requestSerializer setValue:@"1" forHTTPHeaderField:@"encrypttype"];
     });
     return _service;
 }
@@ -95,6 +98,10 @@ static HHHttpservice * _service = nil;
         NSString *path = request.urlParameters.path;
         //设置baseURL
         _service = [self initWithServerBaseURL:[NSURL URLWithString:request.urlParameters.headpath]];
+        // 设置token
+        [_service.requestSerializer setValue:[HHLoginModel userFromFile].token ?:@"" forHTTPHeaderField:@"token"];
+        // 对外显示的版本号
+        [_service.requestSerializer setValue:HH_SHORT_VERSION forHTTPHeaderField:@"version"];
         NSDictionary *parameters =request.urlParameters.parameters ? [request.urlParameters.parameters mutableCopy] : [NSMutableDictionary dictionary];
         NSMutableURLRequest *urlRequest = [self.requestSerializer requestWithMethod:method URLString:[[NSURL URLWithString:path relativeToURL:self.baseURL] absoluteString] parameters:parameters error:&serialiaztionError];
         if (serialiaztionError) {

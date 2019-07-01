@@ -11,6 +11,6 @@
 @implementation HHResponse
 + (NSDictionary *)mj_replacedKeyFromPropertyName
 {
-    return @{@"responseCode":@"errno",@"body":@"msg"};
+    return @{@"responseCode":@"errno",@"body":@"msg",@"responseMsg":@"msginfo"};
 }
 @end

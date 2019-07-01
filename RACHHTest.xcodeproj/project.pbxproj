@@ -31,6 +31,12 @@
 		A1D68B6B22C9024600D95029 /* HHLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68B6A22C9024600D95029 /* HHLoginView.m */; };
 		A1D68B6F22C90BC500D95029 /* NSString+SHA256.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68B6E22C90BC500D95029 /* NSString+SHA256.m */; };
 		A1D68B7222C9E2FD00D95029 /* HHNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68B7122C9E2FD00D95029 /* HHNavigationViewController.m */; };
+		A1D68B7A22C9EF4600D95029 /* HHHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68B7922C9EF4600D95029 /* HHHomeModel.m */; };
+		A1D68B7D22C9F07F00D95029 /* HHHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68B7C22C9F07F00D95029 /* HHHomeViewModel.m */; };
+		A1D68B8022C9F0AA00D95029 /* HHHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68B7F22C9F0AA00D95029 /* HHHomeView.m */; };
+		A1D68B8322C9F0BF00D95029 /* HHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68B8222C9F0BF00D95029 /* HHHomeViewController.m */; };
+		A1D68B8722C9FE5800D95029 /* HHHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68B8522C9FE5800D95029 /* HHHomeTableViewCell.m */; };
+		A1D68B8822C9FE5800D95029 /* HHHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1D68B8622C9FE5800D95029 /* HHHomeTableViewCell.xib */; };
 		D56213B7D2C369ADF7FA1E88 /* Pods_RACHHTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE91DB82135CFF382E47300 /* Pods_RACHHTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +117,17 @@
 		A1D68B6E22C90BC500D95029 /* NSString+SHA256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SHA256.m"; sourceTree = "<group>"; };
 		A1D68B7022C9E2FD00D95029 /* HHNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNavigationViewController.h; sourceTree = "<group>"; };
 		A1D68B7122C9E2FD00D95029 /* HHNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNavigationViewController.m; sourceTree = "<group>"; };
+		A1D68B7822C9EF4600D95029 /* HHHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHomeModel.h; sourceTree = "<group>"; };
+		A1D68B7922C9EF4600D95029 /* HHHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHomeModel.m; sourceTree = "<group>"; };
+		A1D68B7B22C9F07F00D95029 /* HHHomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHomeViewModel.h; sourceTree = "<group>"; };
+		A1D68B7C22C9F07F00D95029 /* HHHomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHomeViewModel.m; sourceTree = "<group>"; };
+		A1D68B7E22C9F0AA00D95029 /* HHHomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHomeView.h; sourceTree = "<group>"; };
+		A1D68B7F22C9F0AA00D95029 /* HHHomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHomeView.m; sourceTree = "<group>"; };
+		A1D68B8122C9F0BF00D95029 /* HHHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHomeViewController.h; sourceTree = "<group>"; };
+		A1D68B8222C9F0BF00D95029 /* HHHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHomeViewController.m; sourceTree = "<group>"; };
+		A1D68B8422C9FE5800D95029 /* HHHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHomeTableViewCell.h; sourceTree = "<group>"; };
+		A1D68B8522C9FE5800D95029 /* HHHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHomeTableViewCell.m; sourceTree = "<group>"; };
+		A1D68B8622C9FE5800D95029 /* HHHomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HHHomeTableViewCell.xib; sourceTree = "<group>"; };
 		CE8FA99D9C8733AD5EAFB7F1 /* Pods-RACHHTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACHHTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACHHTest/Pods-RACHHTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +199,7 @@
 		A1D68A9E22C4B90B00D95029 /* RACHHTest */ = {
 			isa = PBXGroup;
 			children = (
+				A1D68B7322C9EEBC00D95029 /* HHHome */,
 				A1D68B0A22C5E9CB00D95029 /* HHLogin */,
 				A1D68B0622C5E6DC00D95029 /* HHCategories */,
 				A1D68AF922C5C1EA00D95029 /* HHBases */,
@@ -390,6 +408,56 @@
 			path = HHBaseViewModel;
 			sourceTree = "<group>";
 		};
+		A1D68B7322C9EEBC00D95029 /* HHHome */ = {
+			isa = PBXGroup;
+			children = (
+				A1D68B7722C9EEFB00D95029 /* HHHomeViewController */,
+				A1D68B7622C9EEEF00D95029 /* HHHomeView */,
+				A1D68B7522C9EEE300D95029 /* HHHomeViewModel */,
+				A1D68B7422C9EED500D95029 /* HHHomeModel */,
+			);
+			path = HHHome;
+			sourceTree = "<group>";
+		};
+		A1D68B7422C9EED500D95029 /* HHHomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				A1D68B7822C9EF4600D95029 /* HHHomeModel.h */,
+				A1D68B7922C9EF4600D95029 /* HHHomeModel.m */,
+			);
+			path = HHHomeModel;
+			sourceTree = "<group>";
+		};
+		A1D68B7522C9EEE300D95029 /* HHHomeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A1D68B7B22C9F07F00D95029 /* HHHomeViewModel.h */,
+				A1D68B7C22C9F07F00D95029 /* HHHomeViewModel.m */,
+			);
+			path = HHHomeViewModel;
+			sourceTree = "<group>";
+		};
+		A1D68B7622C9EEEF00D95029 /* HHHomeView */ = {
+			isa = PBXGroup;
+			children = (
+				A1D68B7E22C9F0AA00D95029 /* HHHomeView.h */,
+				A1D68B7F22C9F0AA00D95029 /* HHHomeView.m */,
+				A1D68B8422C9FE5800D95029 /* HHHomeTableViewCell.h */,
+				A1D68B8522C9FE5800D95029 /* HHHomeTableViewCell.m */,
+				A1D68B8622C9FE5800D95029 /* HHHomeTableViewCell.xib */,
+			);
+			path = HHHomeView;
+			sourceTree = "<group>";
+		};
+		A1D68B7722C9EEFB00D95029 /* HHHomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A1D68B8122C9F0BF00D95029 /* HHHomeViewController.h */,
+				A1D68B8222C9F0BF00D95029 /* HHHomeViewController.m */,
+			);
+			path = HHHomeViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -495,6 +563,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D68B8822C9FE5800D95029 /* HHHomeTableViewCell.xib in Resources */,
 				A1D68AAC22C4B90D00D95029 /* LaunchScreen.storyboard in Resources */,
 				A1D68AA922C4B90D00D95029 /* Assets.xcassets in Resources */,
 			);
@@ -585,10 +654,15 @@
 				A1D68B1122C6295000D95029 /* HHLoginModel.m in Sources */,
 				A1D68B0022C5C31000D95029 /* HHBaseModel.m in Sources */,
 				A1D68B0922C5E72A00D95029 /* NSString+HHCategory.m in Sources */,
+				A1D68B8322C9F0BF00D95029 /* HHHomeViewController.m in Sources */,
 				A1D68B6822C8B6DD00D95029 /* HHLoginViewController.m in Sources */,
 				A1D68B0422C5DFFB00D95029 /* HHResponse.m in Sources */,
+				A1D68B7A22C9EF4600D95029 /* HHHomeModel.m in Sources */,
 				A1D68AF422C5AED800D95029 /* UIViewController+HHHierarchy.m in Sources */,
+				A1D68B8022C9F0AA00D95029 /* HHHomeView.m in Sources */,
+				A1D68B7D22C9F07F00D95029 /* HHHomeViewModel.m in Sources */,
 				A1D68B1422C6320B00D95029 /* HHLoginViewModel.m in Sources */,
+				A1D68B8722C9FE5800D95029 /* HHHomeTableViewCell.m in Sources */,
 				A1D68B6F22C90BC500D95029 /* NSString+SHA256.m in Sources */,
 				A1D68B6222C8A96900D95029 /* HHBaseViewModel.m in Sources */,
 				A1D68B6522C8B6A700D95029 /* HHBaseViewController.m in Sources */,
