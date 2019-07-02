@@ -435,15 +435,15 @@
 		A1D68B7322C9EEBC00D95029 /* HHHome */ = {
 			isa = PBXGroup;
 			children = (
-				A1D68B7722C9EEFB00D95029 /* HHHomeViewController */,
-				A1D68B7622C9EEEF00D95029 /* HHHomeView */,
-				A1D68B7522C9EEE300D95029 /* HHHomeViewModel */,
-				A1D68B7422C9EED500D95029 /* HHHomeModel */,
+				A1D68B7722C9EEFB00D95029 /* HHViewController */,
+				A1D68B7622C9EEEF00D95029 /* HHView */,
+				A1D68B7522C9EEE300D95029 /* HHViewModel */,
+				A1D68B7422C9EED500D95029 /* HHModel */,
 			);
 			path = HHHome;
 			sourceTree = "<group>";
 		};
-		A1D68B7422C9EED500D95029 /* HHHomeModel */ = {
+		A1D68B7422C9EED500D95029 /* HHModel */ = {
 			isa = PBXGroup;
 			children = (
 				A1D68B7822C9EF4600D95029 /* HHHomeModel.h */,
@@ -451,19 +451,19 @@
 				A1033A9022CA4057001FB316 /* HHHomeListModel.h */,
 				A1033A9122CA4057001FB316 /* HHHomeListModel.m */,
 			);
-			path = HHHomeModel;
+			path = HHModel;
 			sourceTree = "<group>";
 		};
-		A1D68B7522C9EEE300D95029 /* HHHomeViewModel */ = {
+		A1D68B7522C9EEE300D95029 /* HHViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				A1D68B7B22C9F07F00D95029 /* HHHomeViewModel.h */,
 				A1D68B7C22C9F07F00D95029 /* HHHomeViewModel.m */,
 			);
-			path = HHHomeViewModel;
+			path = HHViewModel;
 			sourceTree = "<group>";
 		};
-		A1D68B7622C9EEEF00D95029 /* HHHomeView */ = {
+		A1D68B7622C9EEEF00D95029 /* HHView */ = {
 			isa = PBXGroup;
 			children = (
 				A1D68B7E22C9F0AA00D95029 /* HHHomeView.h */,
@@ -472,16 +472,16 @@
 				A1D68B8522C9FE5800D95029 /* HHHomeTableViewCell.m */,
 				A1D68B8622C9FE5800D95029 /* HHHomeTableViewCell.xib */,
 			);
-			path = HHHomeView;
+			path = HHView;
 			sourceTree = "<group>";
 		};
-		A1D68B7722C9EEFB00D95029 /* HHHomeViewController */ = {
+		A1D68B7722C9EEFB00D95029 /* HHViewController */ = {
 			isa = PBXGroup;
 			children = (
 				A1D68B8122C9F0BF00D95029 /* HHHomeViewController.h */,
 				A1D68B8222C9F0BF00D95029 /* HHHomeViewController.m */,
 			);
-			path = HHHomeViewController;
+			path = HHViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
