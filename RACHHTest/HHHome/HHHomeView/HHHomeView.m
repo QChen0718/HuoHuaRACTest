@@ -33,6 +33,7 @@
     self.pageNum=0;
     self.pageSize=10;
     self.sumModelArray = [[NSMutableArray alloc]init];
+    self.frame=HH_MAIN_SCREEN;
     [self addSubview:self.tableview];
 }
 - (void)hh_bindViewModel
@@ -40,9 +41,19 @@
     //必须是先订阅在执行
     //订阅
     [self.homeviewModel.homelistCommand.executionSignals.switchToLatest subscribeNext:^(HHHomeModel *homemodel) {
+        if (self.pageNum==0) {
+            [self.sumModelArray removeAllObjects];
+        }
+        [self.tableview.mj_header endRefreshing];
+        [self.tableview.mj_footer endRefreshing];
         [self.sumModelArray addObjectsFromArray: homemodel.list];
         [self.tableview reloadData];
     }];
+    [self loadData];
+}
+//加载首页列表数据
+- (void)loadData
+{
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
     [dict setObject:@(self.pageNum) forKey:@"pageNum"];
     [dict setObject:@(self.pageSize) forKey:@"pageSize"];
@@ -57,12 +68,17 @@
         _tableview.delegate=self;
         _tableview.dataSource=self;
         [_tableview registerNib:[UINib nibWithNibName:@"HHHomeTableViewCell" bundle:nil] forCellReuseIdentifier:KCELLID];
-        _tableview.mj_header=[MJRefreshHeader headerWithRefreshingBlock:^{
+        @weakify(self);
+        _tableview.mj_header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
            //刷新
-            
+            @strongify(self);
+            self.pageNum=0;
+            [self loadData];
         }];
-        _tableview.mj_footer = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
+        _tableview.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
            //加载
+            self.pageNum++;
+            [self loadData];
         }];
     }
     return _tableview;

@@ -126,7 +126,7 @@ static HHHttpservice * _service = nil;
         [[MBProgressHUD HUDForView:controller.view] hideAnimated:YES];
         /// 加载loading
         if (loading) {
-            [MBProgressHUD showHUDAddedTo:controller.view animated:YES];
+            [MBProgressHUD showMessage:@"加载中" toView:controller.view];
         }
         /// 获取请求任务
         __block NSURLSessionDataTask *task = nil;
@@ -136,7 +136,7 @@ static HHHttpservice * _service = nil;
             // 下载的进度
         } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
             if (loading) {
-                [MBProgressHUD hideHUDForView:controller.view animated:YES];
+                [MBProgressHUD hideHUDForView:controller.view];
             }
             if (error) {
                 //解析error提示错误信息

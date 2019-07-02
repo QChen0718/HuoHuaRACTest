@@ -18,4 +18,5 @@
 #import "NSString+SHA256.h"
 #import "HHBaseView.h"
 #import "HHLoginModel.h"
+#import "MBProgressHUD+Category.h"
 #endif /* HHClass_h */
