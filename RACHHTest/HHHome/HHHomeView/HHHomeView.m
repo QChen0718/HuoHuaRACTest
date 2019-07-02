@@ -57,6 +57,13 @@
         _tableview.delegate=self;
         _tableview.dataSource=self;
         [_tableview registerNib:[UINib nibWithNibName:@"HHHomeTableViewCell" bundle:nil] forCellReuseIdentifier:KCELLID];
+        _tableview.mj_header=[MJRefreshHeader headerWithRefreshingBlock:^{
+           //刷新
+            
+        }];
+        _tableview.mj_footer = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
+           //加载
+        }];
     }
     return _tableview;
 }
