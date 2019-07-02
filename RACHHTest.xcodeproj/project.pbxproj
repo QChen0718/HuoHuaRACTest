@@ -13,6 +13,10 @@
 		A1033A8F22CA3D0A001FB316 /* HHLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033A8D22CA3D0A001FB316 /* HHLoginView.m */; };
 		A1033A9222CA4057001FB316 /* HHHomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033A9122CA4057001FB316 /* HHHomeListModel.m */; };
 		A1033A9B22CB0AE9001FB316 /* MBProgressHUD+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033A9A22CB0AE9001FB316 /* MBProgressHUD+Category.m */; };
+		A1033AA222CBA986001FB316 /* HHHomeDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033AA122CBA986001FB316 /* HHHomeDetailVC.m */; };
+		A1033AA522CBA9D6001FB316 /* HHHomeDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033AA422CBA9D6001FB316 /* HHHomeDetailView.m */; };
+		A1033AA822CBAA09001FB316 /* HHHomeDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033AA722CBAA09001FB316 /* HHHomeDetailViewModel.m */; };
+		A1033AAB22CBAA24001FB316 /* HHHomeDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033AAA22CBAA24001FB316 /* HHHomeDetailModel.m */; };
 		A1D68AA122C4B90B00D95029 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68AA022C4B90B00D95029 /* AppDelegate.m */; };
 		A1D68AA922C4B90D00D95029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D68AA822C4B90D00D95029 /* Assets.xcassets */; };
 		A1D68AAC22C4B90D00D95029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D68AAA22C4B90D00D95029 /* LaunchScreen.storyboard */; };
@@ -74,6 +78,14 @@
 		A1033A9122CA4057001FB316 /* HHHomeListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHomeListModel.m; sourceTree = "<group>"; };
 		A1033A9922CB0AE9001FB316 /* MBProgressHUD+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Category.h"; sourceTree = "<group>"; };
 		A1033A9A22CB0AE9001FB316 /* MBProgressHUD+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Category.m"; sourceTree = "<group>"; };
+		A1033AA022CBA986001FB316 /* HHHomeDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHomeDetailVC.h; sourceTree = "<group>"; };
+		A1033AA122CBA986001FB316 /* HHHomeDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHomeDetailVC.m; sourceTree = "<group>"; };
+		A1033AA322CBA9D6001FB316 /* HHHomeDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHomeDetailView.h; sourceTree = "<group>"; };
+		A1033AA422CBA9D6001FB316 /* HHHomeDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHomeDetailView.m; sourceTree = "<group>"; };
+		A1033AA622CBAA09001FB316 /* HHHomeDetailViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHomeDetailViewModel.h; sourceTree = "<group>"; };
+		A1033AA722CBAA09001FB316 /* HHHomeDetailViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHomeDetailViewModel.m; sourceTree = "<group>"; };
+		A1033AA922CBAA24001FB316 /* HHHomeDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHomeDetailModel.h; sourceTree = "<group>"; };
+		A1033AAA22CBAA24001FB316 /* HHHomeDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHomeDetailModel.m; sourceTree = "<group>"; };
 		A1D68A9C22C4B90B00D95029 /* RACHHTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACHHTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D68A9F22C4B90B00D95029 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1D68AA022C4B90B00D95029 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -450,6 +462,8 @@
 				A1D68B7922C9EF4600D95029 /* HHHomeModel.m */,
 				A1033A9022CA4057001FB316 /* HHHomeListModel.h */,
 				A1033A9122CA4057001FB316 /* HHHomeListModel.m */,
+				A1033AA922CBAA24001FB316 /* HHHomeDetailModel.h */,
+				A1033AAA22CBAA24001FB316 /* HHHomeDetailModel.m */,
 			);
 			path = HHModel;
 			sourceTree = "<group>";
@@ -459,6 +473,8 @@
 			children = (
 				A1D68B7B22C9F07F00D95029 /* HHHomeViewModel.h */,
 				A1D68B7C22C9F07F00D95029 /* HHHomeViewModel.m */,
+				A1033AA622CBAA09001FB316 /* HHHomeDetailViewModel.h */,
+				A1033AA722CBAA09001FB316 /* HHHomeDetailViewModel.m */,
 			);
 			path = HHViewModel;
 			sourceTree = "<group>";
@@ -471,6 +487,8 @@
 				A1D68B8422C9FE5800D95029 /* HHHomeTableViewCell.h */,
 				A1D68B8522C9FE5800D95029 /* HHHomeTableViewCell.m */,
 				A1D68B8622C9FE5800D95029 /* HHHomeTableViewCell.xib */,
+				A1033AA322CBA9D6001FB316 /* HHHomeDetailView.h */,
+				A1033AA422CBA9D6001FB316 /* HHHomeDetailView.m */,
 			);
 			path = HHView;
 			sourceTree = "<group>";
@@ -480,6 +498,8 @@
 			children = (
 				A1D68B8122C9F0BF00D95029 /* HHHomeViewController.h */,
 				A1D68B8222C9F0BF00D95029 /* HHHomeViewController.m */,
+				A1033AA022CBA986001FB316 /* HHHomeDetailVC.h */,
+				A1033AA122CBA986001FB316 /* HHHomeDetailVC.m */,
 			);
 			path = HHViewController;
 			sourceTree = "<group>";
@@ -678,11 +698,13 @@
 				A1D68B1122C6295000D95029 /* HHLoginModel.m in Sources */,
 				A1D68B0022C5C31000D95029 /* HHBaseModel.m in Sources */,
 				A1D68B0922C5E72A00D95029 /* NSString+HHCategory.m in Sources */,
+				A1033AAB22CBAA24001FB316 /* HHHomeDetailModel.m in Sources */,
 				A1D68B8322C9F0BF00D95029 /* HHHomeViewController.m in Sources */,
 				A1D68B0422C5DFFB00D95029 /* HHResponse.m in Sources */,
 				A1D68B7A22C9EF4600D95029 /* HHHomeModel.m in Sources */,
 				A1D68AF422C5AED800D95029 /* UIViewController+HHHierarchy.m in Sources */,
 				A1D68B8022C9F0AA00D95029 /* HHHomeView.m in Sources */,
+				A1033AA522CBA9D6001FB316 /* HHHomeDetailView.m in Sources */,
 				A1033A8F22CA3D0A001FB316 /* HHLoginView.m in Sources */,
 				A1033A8222CA3C1B001FB316 /* HHLoginViewController.m in Sources */,
 				A1D68B7D22C9F07F00D95029 /* HHHomeViewModel.m in Sources */,
@@ -690,11 +712,13 @@
 				A1D68B8722C9FE5800D95029 /* HHHomeTableViewCell.m in Sources */,
 				A1D68B6F22C90BC500D95029 /* NSString+SHA256.m in Sources */,
 				A1D68B6222C8A96900D95029 /* HHBaseViewModel.m in Sources */,
+				A1033AA822CBAA09001FB316 /* HHHomeDetailViewModel.m in Sources */,
 				A1D68AAF22C4B90D00D95029 /* main.m in Sources */,
 				A1033A8A22CA3CC6001FB316 /* HHBaseViewController.m in Sources */,
 				A1D68ADE22C4C20300D95029 /* HHHTTPRequest.m in Sources */,
 				A1033A9222CA4057001FB316 /* HHHomeListModel.m in Sources */,
 				A1033A9B22CB0AE9001FB316 /* MBProgressHUD+Category.m in Sources */,
+				A1033AA222CBA986001FB316 /* HHHomeDetailVC.m in Sources */,
 				A1D68AA122C4B90B00D95029 /* AppDelegate.m in Sources */,
 				A1D68AD722C4BC6200D95029 /* HHHttpservice.m in Sources */,
 				A1033A8622CA3C76001FB316 /* HHBaseView.m in Sources */,
