@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HHHomeDetailViewModel : HHBaseViewModel
-
+@property (nonatomic,readonly,strong)RACCommand *requestDetailCommand;
 @end
 
 NS_ASSUME_NONNULL_END

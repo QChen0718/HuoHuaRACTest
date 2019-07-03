@@ -7,18 +7,26 @@
 //
 
 #import "HHHomeTableViewCell.h"
+#import "HHHomeListModel.h"
+@interface HHHomeTableViewCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *poster;
+@property (weak, nonatomic) IBOutlet UILabel *audioTitle;
+@property (weak, nonatomic) IBOutlet UILabel *detail;
+
+@end
 
 @implementation HHHomeTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.poster.clipsToBounds=YES;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setDataModel:(HHHomeListModel *)model
+{
+    [self.poster sd_setImageWithURL:[NSURL URLWithString:model.poster ?:@""] placeholderImage:[UIImage imageNamed:@""]];
+    self.audioTitle.text = model.title ?: @"";
+    self.detail.text = model.descriptions ?: @""; 
 }
-
 @end

@@ -15,4 +15,6 @@
 #define kLogin                  @"account/baseuser/login"
 //音频列表
 #define kAudioListUrl           @"audio/list.do"
+//音频专辑单个条目
+#define kAudioSingleUrl         @"audio/single.do"
 #endif /* HHAPI_h */

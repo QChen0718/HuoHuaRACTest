@@ -18,6 +18,7 @@
 #import <IQKeyboardManager/IQKeyboardManager.h>
 #import <Masonry/Masonry.h>
 #import <JKCategories/JKCategories.h>
+#import "UIImageView+WebCache.h"
 #import "HHClass.h"
 #import "HHAPI.h"
 // Include any system framework and library headers here that should be included in all compilation units.

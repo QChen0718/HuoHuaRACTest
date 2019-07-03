@@ -17,6 +17,7 @@
 		A1033AA522CBA9D6001FB316 /* HHHomeDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033AA422CBA9D6001FB316 /* HHHomeDetailView.m */; };
 		A1033AA822CBAA09001FB316 /* HHHomeDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033AA722CBAA09001FB316 /* HHHomeDetailViewModel.m */; };
 		A1033AAB22CBAA24001FB316 /* HHHomeDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033AAA22CBAA24001FB316 /* HHHomeDetailModel.m */; };
+		A1033AAF22CC87D4001FB316 /* HHHomeDetailHeaerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033AAE22CC87D4001FB316 /* HHHomeDetailHeaerView.m */; };
 		A1D68AA122C4B90B00D95029 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68AA022C4B90B00D95029 /* AppDelegate.m */; };
 		A1D68AA922C4B90D00D95029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D68AA822C4B90D00D95029 /* Assets.xcassets */; };
 		A1D68AAC22C4B90D00D95029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D68AAA22C4B90D00D95029 /* LaunchScreen.storyboard */; };
@@ -86,6 +87,8 @@
 		A1033AA722CBAA09001FB316 /* HHHomeDetailViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHomeDetailViewModel.m; sourceTree = "<group>"; };
 		A1033AA922CBAA24001FB316 /* HHHomeDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHomeDetailModel.h; sourceTree = "<group>"; };
 		A1033AAA22CBAA24001FB316 /* HHHomeDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHomeDetailModel.m; sourceTree = "<group>"; };
+		A1033AAD22CC87D4001FB316 /* HHHomeDetailHeaerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHomeDetailHeaerView.h; sourceTree = "<group>"; };
+		A1033AAE22CC87D4001FB316 /* HHHomeDetailHeaerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHomeDetailHeaerView.m; sourceTree = "<group>"; };
 		A1D68A9C22C4B90B00D95029 /* RACHHTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACHHTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D68A9F22C4B90B00D95029 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1D68AA022C4B90B00D95029 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -213,8 +216,8 @@
 		A1033A8C22CA3D0A001FB316 /* HHLoginView */ = {
 			isa = PBXGroup;
 			children = (
-				A1033A8D22CA3D0A001FB316 /* HHLoginView.m */,
 				A1033A8E22CA3D0A001FB316 /* HHLoginView.h */,
+				A1033A8D22CA3D0A001FB316 /* HHLoginView.m */,
 			);
 			path = HHLoginView;
 			sourceTree = "<group>";
@@ -489,6 +492,8 @@
 				A1D68B8622C9FE5800D95029 /* HHHomeTableViewCell.xib */,
 				A1033AA322CBA9D6001FB316 /* HHHomeDetailView.h */,
 				A1033AA422CBA9D6001FB316 /* HHHomeDetailView.m */,
+				A1033AAD22CC87D4001FB316 /* HHHomeDetailHeaerView.h */,
+				A1033AAE22CC87D4001FB316 /* HHHomeDetailHeaerView.m */,
 			);
 			path = HHView;
 			sourceTree = "<group>";
@@ -721,6 +726,7 @@
 				A1033AA222CBA986001FB316 /* HHHomeDetailVC.m in Sources */,
 				A1D68AA122C4B90B00D95029 /* AppDelegate.m in Sources */,
 				A1D68AD722C4BC6200D95029 /* HHHttpservice.m in Sources */,
+				A1033AAF22CC87D4001FB316 /* HHHomeDetailHeaerView.m in Sources */,
 				A1033A8622CA3C76001FB316 /* HHBaseView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

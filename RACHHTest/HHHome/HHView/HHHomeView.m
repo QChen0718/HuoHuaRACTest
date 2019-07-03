@@ -11,6 +11,7 @@
 #import "HHHomeTableViewCell.h"
 #import "HHHomeModel.h"
 #import "HHHomeListModel.h"
+#import "HHHomeDetailVC.h"
 #define KCELLID @"kcellid"
 
 @interface HHHomeView ()<UITableViewDelegate,UITableViewDataSource>
@@ -68,6 +69,9 @@
         _tableview.delegate=self;
         _tableview.dataSource=self;
         [_tableview registerNib:[UINib nibWithNibName:@"HHHomeTableViewCell" bundle:nil] forCellReuseIdentifier:KCELLID];
+        _tableview.rowHeight= UITableViewAutomaticDimension;
+        _tableview.estimatedRowHeight=44;
+        
         @weakify(self);
         _tableview.mj_header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
            //刷新
@@ -98,8 +102,15 @@
 {
     HHHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:KCELLID forIndexPath:indexPath];
     HHHomeListModel *listmodel = self.sumModelArray[indexPath.row];
-    cell.textLabel.text=listmodel.talkerName;
+    [cell setDataModel:listmodel];
     return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HHHomeListModel *model = self.sumModelArray[indexPath.row];
+    HHHomeDetailVC *vc = [[HHHomeDetailVC alloc]init];
+    vc.audioid=model.audiodetail_id;
+    [self.hh_viewController.navigationController pushViewController:vc animated:YES];
 }
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {

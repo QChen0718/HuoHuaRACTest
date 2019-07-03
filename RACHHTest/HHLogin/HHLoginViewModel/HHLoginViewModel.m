@@ -35,7 +35,7 @@
     }
     if (promptStr) {
         //返回一个空信号
-//        [MBProgressHUD ]
+        [MBProgressHUD showError:promptStr];
         return [RACSignal empty];
     }
     RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {

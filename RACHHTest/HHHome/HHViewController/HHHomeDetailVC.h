@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HHHomeDetailVC : HHBaseViewController
-
+//详情ID
+@property (nonatomic,assign)NSInteger audioid;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -9,5 +9,8 @@
 #import "HHHomeListModel.h"
 
 @implementation HHHomeListModel
-
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"descriptions":@"description"};
+}
 @end

@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class HHHomeListModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HHHomeTableViewCell : UITableViewCell
-
+- (void)setDataModel:(HHHomeListModel *)model;
 @end
 
 NS_ASSUME_NONNULL_END
