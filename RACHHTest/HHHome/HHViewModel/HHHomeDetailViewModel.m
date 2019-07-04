@@ -7,6 +7,7 @@
 //
 
 #import "HHHomeDetailViewModel.h"
+#import "HHHomeListModel.h"
 #import "HHHomeDetailModel.h"
 @interface HHHomeDetailViewModel ()
 @property (nonatomic,readwrite,strong)RACCommand *requestDetailCommand;
@@ -27,6 +28,9 @@
 - (RACSignal *)requestDetailData:(NSDictionary *)dict
 {
     
+    if (dict==nil||dict.count==0) {
+        return [RACSignal empty];
+    }
     return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
        
         //开始请求数据

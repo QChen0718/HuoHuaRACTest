@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HHHomeDetailTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="60.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7M-3m-srs">
+                        <rect key="frame" x="15" y="22" width="30" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="DL0-jF-H73"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="苹果引发的智能手机革命大事件" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CS8-zd-t8t">
+                        <rect key="frame" x="60" y="10" width="300" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVY-lz-QCj">
+                        <rect key="frame" x="60" y="33" width="300" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="CS8-zd-t8t" secondAttribute="trailing" constant="15" id="0n7-B2-dqX"/>
+                    <constraint firstItem="CS8-zd-t8t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="1DK-vD-OAW"/>
+                    <constraint firstItem="R7M-3m-srs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Ab5-UX-wSN"/>
+                    <constraint firstItem="CS8-zd-t8t" firstAttribute="leading" secondItem="R7M-3m-srs" secondAttribute="trailing" constant="15" id="QTd-y8-EKd"/>
+                    <constraint firstItem="hVY-lz-QCj" firstAttribute="top" secondItem="CS8-zd-t8t" secondAttribute="bottom" constant="5" id="U31-vB-UJH"/>
+                    <constraint firstItem="hVY-lz-QCj" firstAttribute="leading" secondItem="CS8-zd-t8t" secondAttribute="leading" id="UhI-QI-elj"/>
+                    <constraint firstItem="hVY-lz-QCj" firstAttribute="trailing" secondItem="CS8-zd-t8t" secondAttribute="trailing" id="WhQ-Nc-7UI"/>
+                    <constraint firstItem="R7M-3m-srs" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ouH-E4-IJu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="audioTitle" destination="CS8-zd-t8t" id="IoP-er-VTz"/>
+                <outlet property="dateLabel" destination="hVY-lz-QCj" id="uLN-IJ-LAo"/>
+                <outlet property="numberLabel" destination="R7M-3m-srs" id="Zol-Dq-ggF"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

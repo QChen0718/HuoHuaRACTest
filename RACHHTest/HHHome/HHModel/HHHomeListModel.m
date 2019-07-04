@@ -11,6 +11,6 @@
 @implementation HHHomeListModel
 + (NSDictionary *)mj_replacedKeyFromPropertyName
 {
-    return @{@"descriptions":@"description"};
+    return @{@"descriptions":@"description",@"audiodetail_id":@"id"};
 }
 @end

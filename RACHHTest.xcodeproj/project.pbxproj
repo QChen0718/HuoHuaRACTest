@@ -18,6 +18,8 @@
 		A1033AA822CBAA09001FB316 /* HHHomeDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033AA722CBAA09001FB316 /* HHHomeDetailViewModel.m */; };
 		A1033AAB22CBAA24001FB316 /* HHHomeDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033AAA22CBAA24001FB316 /* HHHomeDetailModel.m */; };
 		A1033AAF22CC87D4001FB316 /* HHHomeDetailHeaerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033AAE22CC87D4001FB316 /* HHHomeDetailHeaerView.m */; };
+		A1033AB322CDCC88001FB316 /* HHHomeDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033AB122CDCC88001FB316 /* HHHomeDetailTableViewCell.m */; };
+		A1033AB422CDCC88001FB316 /* HHHomeDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1033AB222CDCC88001FB316 /* HHHomeDetailTableViewCell.xib */; };
 		A1D68AA122C4B90B00D95029 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68AA022C4B90B00D95029 /* AppDelegate.m */; };
 		A1D68AA922C4B90D00D95029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D68AA822C4B90D00D95029 /* Assets.xcassets */; };
 		A1D68AAC22C4B90D00D95029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D68AAA22C4B90D00D95029 /* LaunchScreen.storyboard */; };
@@ -89,6 +91,9 @@
 		A1033AAA22CBAA24001FB316 /* HHHomeDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHomeDetailModel.m; sourceTree = "<group>"; };
 		A1033AAD22CC87D4001FB316 /* HHHomeDetailHeaerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHomeDetailHeaerView.h; sourceTree = "<group>"; };
 		A1033AAE22CC87D4001FB316 /* HHHomeDetailHeaerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHomeDetailHeaerView.m; sourceTree = "<group>"; };
+		A1033AB022CDCC88001FB316 /* HHHomeDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHomeDetailTableViewCell.h; sourceTree = "<group>"; };
+		A1033AB122CDCC88001FB316 /* HHHomeDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHomeDetailTableViewCell.m; sourceTree = "<group>"; };
+		A1033AB222CDCC88001FB316 /* HHHomeDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HHHomeDetailTableViewCell.xib; sourceTree = "<group>"; };
 		A1D68A9C22C4B90B00D95029 /* RACHHTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACHHTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D68A9F22C4B90B00D95029 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1D68AA022C4B90B00D95029 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -492,6 +497,9 @@
 				A1D68B8622C9FE5800D95029 /* HHHomeTableViewCell.xib */,
 				A1033AA322CBA9D6001FB316 /* HHHomeDetailView.h */,
 				A1033AA422CBA9D6001FB316 /* HHHomeDetailView.m */,
+				A1033AB022CDCC88001FB316 /* HHHomeDetailTableViewCell.h */,
+				A1033AB122CDCC88001FB316 /* HHHomeDetailTableViewCell.m */,
+				A1033AB222CDCC88001FB316 /* HHHomeDetailTableViewCell.xib */,
 				A1033AAD22CC87D4001FB316 /* HHHomeDetailHeaerView.h */,
 				A1033AAE22CC87D4001FB316 /* HHHomeDetailHeaerView.m */,
 			);
@@ -615,6 +623,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1D68B8822C9FE5800D95029 /* HHHomeTableViewCell.xib in Resources */,
+				A1033AB422CDCC88001FB316 /* HHHomeDetailTableViewCell.xib in Resources */,
 				A1D68AAC22C4B90D00D95029 /* LaunchScreen.storyboard in Resources */,
 				A1D68AA922C4B90D00D95029 /* Assets.xcassets in Resources */,
 			);
@@ -706,6 +715,7 @@
 				A1033AAB22CBAA24001FB316 /* HHHomeDetailModel.m in Sources */,
 				A1D68B8322C9F0BF00D95029 /* HHHomeViewController.m in Sources */,
 				A1D68B0422C5DFFB00D95029 /* HHResponse.m in Sources */,
+				A1033AB322CDCC88001FB316 /* HHHomeDetailTableViewCell.m in Sources */,
 				A1D68B7A22C9EF4600D95029 /* HHHomeModel.m in Sources */,
 				A1D68AF422C5AED800D95029 /* UIViewController+HHHierarchy.m in Sources */,
 				A1D68B8022C9F0AA00D95029 /* HHHomeView.m in Sources */,

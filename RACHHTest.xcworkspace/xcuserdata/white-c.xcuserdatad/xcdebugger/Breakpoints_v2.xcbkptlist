@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RACHHTest/HHHttpservice/HHHttpservice.m"
-            timestampString = "583750535.588659"
+            timestampString = "583901686.330387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
@@ -68,7 +68,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RACHHTest/HHHttpservice/HHHttpservice.m"
-            timestampString = "583750535.589185"
+            timestampString = "583901686.331465"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "173"
@@ -84,11 +84,11 @@
                   moduleName = "RACHHTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/white-c/RAC/RACHHTest/HHHttpservice/HHHttpservice.m"
-                  timestampString = "583662689.552897"
+                  timestampString = "583901686.56654"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "166"
-                  endingLineNumber = "166"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
                   offsetFromSymbolStart = "56">
                </Location>
                <Location
@@ -99,11 +99,11 @@
                   moduleName = "RACHHTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/white-c/RAC/RACHHTest/HHHttpservice/HHHttpservice.m"
-                  timestampString = "583662689.555202"
+                  timestampString = "583901686.570593"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "166"
-                  endingLineNumber = "166"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
                   offsetFromSymbolStart = "204">
                </Location>
             </Locations>
@@ -116,7 +116,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RACHHTest/HHHttpservice/HHHttpservice.m"
-            timestampString = "583750535.589651"
+            timestampString = "583901686.33198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "180"
@@ -132,7 +132,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RACHHTest/HHHttpservice/HHHttpservice.m"
-            timestampString = "583750535.589968"
+            timestampString = "583901686.33246"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -148,7 +148,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RACHHTest/HHHttpservice/HHHttpservice.m"
-            timestampString = "583750535.590259"
+            timestampString = "583901686.332985"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "105"
@@ -170,6 +170,70 @@
             startingLineNumber = "35"
             endingLineNumber = "35"
             landmarkName = "-requestHomeList:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RACHHTest/HHHome/HHView/HHHomeDetailView.m"
+            timestampString = "583912276.166525"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "-initWithViewModel:parameters:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RACHHTest/HHHttpservice/HHHttpservice.m"
+            timestampString = "583901686.333809"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "-hh_request:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RACHHTest/HHHttpservice/HHHttpservice.m"
+            timestampString = "583902039.866556"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "-parsedResponseOfClass:responseObject:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RACHHTest/HHHome/HHView/HHHomeDetailView.m"
+            timestampString = "583912276.1667221"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-hh_bindViewModel"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

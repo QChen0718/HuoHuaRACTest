@@ -7,11 +7,11 @@
 //
 
 #import "HHBaseView.h"
-
+@class HHHomeListModel;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HHHomeDetailHeaerView : HHBaseView
-
+- (void)setDataModel:(HHHomeListModel *)listModel;
 @end
 
 NS_ASSUME_NONNULL_END
