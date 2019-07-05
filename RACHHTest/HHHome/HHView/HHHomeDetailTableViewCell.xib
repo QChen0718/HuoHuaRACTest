@@ -49,6 +49,7 @@
                     <constraint firstItem="hVY-lz-QCj" firstAttribute="top" secondItem="CS8-zd-t8t" secondAttribute="bottom" constant="5" id="U31-vB-UJH"/>
                     <constraint firstItem="hVY-lz-QCj" firstAttribute="leading" secondItem="CS8-zd-t8t" secondAttribute="leading" id="UhI-QI-elj"/>
                     <constraint firstItem="hVY-lz-QCj" firstAttribute="trailing" secondItem="CS8-zd-t8t" secondAttribute="trailing" id="WhQ-Nc-7UI"/>
+                    <constraint firstAttribute="bottom" secondItem="hVY-lz-QCj" secondAttribute="bottom" constant="13.5" id="lRs-ec-Rbq"/>
                     <constraint firstItem="R7M-3m-srs" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ouH-E4-IJu"/>
                 </constraints>
             </tableViewCellContentView>

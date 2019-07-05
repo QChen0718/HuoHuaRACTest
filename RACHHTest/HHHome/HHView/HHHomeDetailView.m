@@ -59,27 +59,21 @@
         //更新UI数据
         self.listModel=self.detailModel.list;
         [self.detailHeaderView setDataModel:self.listModel];
+        NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
+        [dict setObject:@(self.pageNum) forKey:@"pageNum"];
+        [dict setObject:@(self.pageSize) forKey:@"pageSize"];
+        [dict addEntriesFromDictionary:self.parmdict];
+        // 追加任务 barrier
+        [self.detailviewModel.requestApartmentAudioCommand execute:dict];
+
     }];
-    
+    [self.detailviewModel.requestDetailCommand execute:self.parmdict];
     //请求详情音频条目列表接口
     [self.detailviewModel.requestApartmentAudioCommand.executionSignals.switchToLatest subscribeNext:^(HHHomeDetailAudioListModel *model) {
          @strongify(self)
         [self.sumdetailModel addObjectsFromArray:model.list];
         //刷新列表
         [self.tableview reloadData];
-    }];
-    
-    NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
-    [dict setObject:@(self.pageNum) forKey:@"pageNum"];
-    [dict setObject:@(self.pageSize) forKey:@"pageSize"];
-    [dict addEntriesFromDictionary:self.parmdict];
-    [self.willAppearSignal subscribeNext:^(id  _Nullable x) {
-        @strongify(self)
-        [self.detailviewModel.requestDetailCommand execute:self.parmdict];
-
-        // 追加任务 barrier
-        [self.detailviewModel.requestApartmentAudioCommand execute:dict];
-
     }];
 }
 
@@ -102,6 +96,8 @@
         _tableview.dataSource=self;
         [_tableview registerNib:[UINib nibWithNibName:@"HHHomeDetailTableViewCell" bundle:nil] forCellReuseIdentifier:CELLID];
         _tableview.tableHeaderView = self.detailHeaderView;
+        _tableview.rowHeight=UITableViewAutomaticDimension;
+        _tableview.estimatedRowHeight=44;
     }
     return _tableview;
 }

@@ -21,6 +21,7 @@
 		A1033AB322CDCC88001FB316 /* HHHomeDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033AB122CDCC88001FB316 /* HHHomeDetailTableViewCell.m */; };
 		A1033AB422CDCC88001FB316 /* HHHomeDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1033AB222CDCC88001FB316 /* HHHomeDetailTableViewCell.xib */; };
 		A1033AB722CDDBCA001FB316 /* HHHomeDetailAudioListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033AB622CDDBCA001FB316 /* HHHomeDetailAudioListModel.m */; };
+		A1033ABA22CF3E7D001FB316 /* HHTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033AB922CF3E7D001FB316 /* HHTabBarViewController.m */; };
 		A1D68AA122C4B90B00D95029 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68AA022C4B90B00D95029 /* AppDelegate.m */; };
 		A1D68AA922C4B90D00D95029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D68AA822C4B90D00D95029 /* Assets.xcassets */; };
 		A1D68AAC22C4B90D00D95029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D68AAA22C4B90D00D95029 /* LaunchScreen.storyboard */; };
@@ -97,6 +98,8 @@
 		A1033AB222CDCC88001FB316 /* HHHomeDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HHHomeDetailTableViewCell.xib; sourceTree = "<group>"; };
 		A1033AB522CDDBCA001FB316 /* HHHomeDetailAudioListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHomeDetailAudioListModel.h; sourceTree = "<group>"; };
 		A1033AB622CDDBCA001FB316 /* HHHomeDetailAudioListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHomeDetailAudioListModel.m; sourceTree = "<group>"; };
+		A1033AB822CF3E7D001FB316 /* HHTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHTabBarViewController.h; sourceTree = "<group>"; };
+		A1033AB922CF3E7D001FB316 /* HHTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHTabBarViewController.m; sourceTree = "<group>"; };
 		A1D68A9C22C4B90B00D95029 /* RACHHTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACHHTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D68A9F22C4B90B00D95029 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1D68AA022C4B90B00D95029 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -348,6 +351,8 @@
 				A1D68AF722C5B04800D95029 /* HHViewControllerHierachy.h */,
 				A1D68B7022C9E2FD00D95029 /* HHNavigationViewController.h */,
 				A1D68B7122C9E2FD00D95029 /* HHNavigationViewController.m */,
+				A1033AB822CF3E7D001FB316 /* HHTabBarViewController.h */,
+				A1033AB922CF3E7D001FB316 /* HHTabBarViewController.m */,
 				A1D68AEC22C5A87800D95029 /* UIWindow+HHHierarchy.h */,
 				A1D68AED22C5A87800D95029 /* UIWindow+HHHierarchy.m */,
 				A1D68AEF22C5AE1500D95029 /* UIView+HHHierarchy.h */,
@@ -735,6 +740,7 @@
 				A1D68B6222C8A96900D95029 /* HHBaseViewModel.m in Sources */,
 				A1033AA822CBAA09001FB316 /* HHHomeDetailViewModel.m in Sources */,
 				A1D68AAF22C4B90D00D95029 /* main.m in Sources */,
+				A1033ABA22CF3E7D001FB316 /* HHTabBarViewController.m in Sources */,
 				A1033A8A22CA3CC6001FB316 /* HHBaseViewController.m in Sources */,
 				A1D68ADE22C4C20300D95029 /* HHHTTPRequest.m in Sources */,
 				A1033A9222CA4057001FB316 /* HHHomeListModel.m in Sources */,
