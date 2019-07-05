@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HHHomeDetailViewModel : HHBaseViewModel
 @property (nonatomic,readonly,strong)RACCommand *requestDetailCommand;
+@property (nonatomic,readonly,strong)RACCommand *requestApartmentAudioCommand;
 @end
 
 NS_ASSUME_NONNULL_END

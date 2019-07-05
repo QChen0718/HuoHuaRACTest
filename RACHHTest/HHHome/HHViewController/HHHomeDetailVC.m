@@ -15,7 +15,11 @@
 @end
 
 @implementation HHHomeDetailVC
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.homedetailView.willAppearSignal sendNext:nil];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

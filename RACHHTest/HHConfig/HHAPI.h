@@ -17,4 +17,6 @@
 #define kAudioListUrl           @"audio/list.do"
 //音频专辑单个条目
 #define kAudioSingleUrl         @"audio/single.do"
+//音频专辑条目列表
+#define kAudioItemUrl           @"audio/item.do"
 #endif /* HHAPI_h */

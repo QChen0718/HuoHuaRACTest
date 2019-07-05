@@ -84,15 +84,17 @@ static HHHttpservice * _service = nil;
 - (RACSignal *)hh_enqueueRequest:(HHHTTPRequest *)request resultClass:(Class)resultClass
 {
     // reduceEach 对返回的元祖进行解包 取出里面的对象分别解析
+    @weakify(self)
     return [[[self hh_request:request] reduceEach:^RACStream *(NSURLResponse *response, NSDictionary *responseObject){
+        @strongify(self)
         return [self parsedResponseOfClass:resultClass responseObject:responseObject];
     }] concat];
 }
 //请求网络数据方法
 - (RACSignal *)hh_request:(HHHTTPRequest *)request {
-    @weakify(self);
+    @weakify(self)
     RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        @strongify(self);
+        @strongify(self)
         NSError *serialiaztionError = nil;
         NSString *method = request.urlParameters.method;
         NSString *path = request.urlParameters.path;
@@ -135,6 +137,7 @@ static HHHttpservice * _service = nil;
         } downloadProgress:^(NSProgress * _Nonnull downloadProgress) {
             // 下载的进度
         } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+            
             if (loading) {
                 [MBProgressHUD hideHUDForView:controller.view];
             }

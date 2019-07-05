@@ -9,16 +9,20 @@
 #import "HHHomeDetailViewModel.h"
 #import "HHHomeListModel.h"
 #import "HHHomeDetailModel.h"
+#import "HHHomeDetailAudioListModel.h"
 @interface HHHomeDetailViewModel ()
 @property (nonatomic,readwrite,strong)RACCommand *requestDetailCommand;
+@property (nonatomic,readwrite,strong)RACCommand *requestApartmentAudioCommand;
 @end
 
 @implementation HHHomeDetailViewModel
 - (RACCommand *)requestDetailCommand
 {
     if (!_requestDetailCommand) {
+        @weakify(self)
         _requestDetailCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
             //返回一个信号
+            @strongify(self)
             return [self requestDetailData:input];
         }];
     }
@@ -31,23 +35,31 @@
     if (dict==nil||dict.count==0) {
         return [RACSignal empty];
     }
-    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-       
-        //开始请求数据
-        HHURLParameters *parameters = [HHURLParameters hh_urlParametersWithMethod:HHHTTPRequestMethodPost headpath:kAudioUnifiedUrl path:kAudioSingleUrl parameters:dict loading:YES];
-        HHHTTPRequest *request = [HHHTTPRequest hh_requestWithParameters:parameters];
-        [[[HHHttpservice sharedInstance]hh_enqueueRequest:request resultClass:[HHHomeDetailModel class]] subscribeNext:^(HHHomeDetailModel *model) {
-            [subscriber sendNext:model];
-            [subscriber sendCompleted];
-        } error:^(NSError * _Nullable error) {
-            [subscriber sendError:error];
-            [subscriber sendCompleted];
+    
+    //开始请求数据
+    HHURLParameters *parameters = [HHURLParameters hh_urlParametersWithMethod:HHHTTPRequestMethodPost headpath:kAudioUnifiedUrl path:kAudioSingleUrl parameters:dict loading:NO];
+    HHHTTPRequest *request = [HHHTTPRequest hh_requestWithParameters:parameters];
+    return [[HHHttpservice sharedInstance]hh_enqueueRequest:request resultClass:[HHHomeDetailModel class]];
+}
+
+- (RACCommand *)requestApartmentAudioCommand
+{
+    if (!_requestApartmentAudioCommand) {
+        _requestApartmentAudioCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+            return [self requestAudioListData:input];
         }];
-        
-        return [RACDisposable disposableWithBlock:^{
-            
-        }];
-    }];
+    }
+    return _requestApartmentAudioCommand;
+}
+
+- (RACSignal *)requestAudioListData:(NSDictionary *)dict
+{
+    
+        //请求列表数据
+        HHURLParameters *parameters = [HHURLParameters hh_urlParametersWithMethod:HHHTTPRequestMethodPost headpath:kAudioUnifiedUrl path:kAudioItemUrl parameters:dict loading:YES];
+        HHHTTPRequest *request =[HHHTTPRequest hh_requestWithParameters:parameters];
+       return [[HHHttpservice sharedInstance]hh_enqueueRequest:request resultClass:[HHHomeDetailAudioListModel class]];
+    
 }
 
 @end

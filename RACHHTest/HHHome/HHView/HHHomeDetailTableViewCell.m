@@ -7,6 +7,7 @@
 //
 
 #import "HHHomeDetailTableViewCell.h"
+#import "HHHomeDetailAudioListModel.h"
 
 @interface HHHomeDetailTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *audioTitle;
@@ -21,6 +22,11 @@
     [super awakeFromNib];
     // Initialization code
 }
-
+- (void)setDataModel:(HHHomeDetailAudioContentModel *)model
+{
+    self.audioTitle.text=model.title ?: @"";
+    self.numberLabel.text=@"1";
+    self.dateLabel.text = model.createAt;
+}
 
 @end

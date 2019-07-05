@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class HHHomeDetailAudioContentModel;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HHHomeDetailTableViewCell : UITableViewCell
-
+- (void)setDataModel:(HHHomeDetailAudioContentModel *)model;
 @end
 
 NS_ASSUME_NONNULL_END
