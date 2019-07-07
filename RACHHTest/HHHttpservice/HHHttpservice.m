@@ -15,7 +15,7 @@ static HHHttpservice * _service = nil;
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _service =  [[self alloc] init];
+        _service =  [[self alloc] initWithServerBaseURL:nil];
         /// 设置允许接收请求返回的数据格式类型
         _service.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:
                                                               @"text/plain",
@@ -25,8 +25,8 @@ static HHHttpservice * _service = nil;
                                                               @"text/javascript", nil];
         /// 是否允许无效证书（也就是自建的证书），默认为NO 如果是需要验证自建证书，需要设置为YES
         _service.securityPolicy.allowInvalidCertificates   = NO;
-        /// 请求序列化器
-        _service.requestSerializer                         = [AFJSONRequestSerializer serializer];
+//        /// 请求序列化器
+//        _service.requestSerializer                         = [AFJSONRequestSerializer serializer];
         /// 超时时间
         _service.requestSerializer.timeoutInterval         = 40;
         
@@ -98,14 +98,17 @@ static HHHttpservice * _service = nil;
         NSError *serialiaztionError = nil;
         NSString *method = request.urlParameters.method;
         NSString *path = request.urlParameters.path;
+        NSURL *baseUrl = [NSURL URLWithString:request.urlParameters.headpath];
+        _service.securityPolicy.validatesDomainName = NO;
+        
         //设置baseURL
-        _service = [self initWithServerBaseURL:[NSURL URLWithString:request.urlParameters.headpath]];
+//        _service = [self initWithServerBaseURL:[NSURL URLWithString:request.urlParameters.headpath]];
         // 设置token
         [_service.requestSerializer setValue:[HHLoginModel userFromFile].token ?:@"" forHTTPHeaderField:@"token"];
         // 对外显示的版本号
         [_service.requestSerializer setValue:HH_SHORT_VERSION forHTTPHeaderField:@"version"];
         NSDictionary *parameters =request.urlParameters.parameters ? [request.urlParameters.parameters mutableCopy] : [NSMutableDictionary dictionary];
-        NSMutableURLRequest *urlRequest = [self.requestSerializer requestWithMethod:method URLString:[[NSURL URLWithString:path relativeToURL:self.baseURL] absoluteString] parameters:parameters error:&serialiaztionError];
+        NSMutableURLRequest *urlRequest = [self.requestSerializer requestWithMethod:method URLString:[[NSURL URLWithString:path relativeToURL:baseUrl] absoluteString] parameters:parameters error:&serialiaztionError];
         if (serialiaztionError) {
             //请求失败
 #pragma clang diagnostic push
@@ -196,7 +199,7 @@ static HHHttpservice * _service = nil;
             }
             else {
                 /// 请求返回的结果不是成功的
-                [subscriber sendNext:responseModel.responseMsg];
+                [subscriber sendError:responseModel.responseMsg];
                 [subscriber sendCompleted];
             }
         }

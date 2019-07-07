@@ -59,15 +59,10 @@
         //更新UI数据
         self.listModel=self.detailModel.list;
         [self.detailHeaderView setDataModel:self.listModel];
-        NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
-        [dict setObject:@(self.pageNum) forKey:@"pageNum"];
-        [dict setObject:@(self.pageSize) forKey:@"pageSize"];
-        [dict addEntriesFromDictionary:self.parmdict];
-        // 追加任务 barrier
-        [self.detailviewModel.requestApartmentAudioCommand execute:dict];
+        
 
     }];
-    [self.detailviewModel.requestDetailCommand execute:self.parmdict];
+    
     //请求详情音频条目列表接口
     [self.detailviewModel.requestApartmentAudioCommand.executionSignals.switchToLatest subscribeNext:^(HHHomeDetailAudioListModel *model) {
          @strongify(self)
@@ -75,6 +70,15 @@
         //刷新列表
         [self.tableview reloadData];
     }];
+    
+    [self.detailviewModel.requestDetailCommand execute:self.parmdict];
+    
+    NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
+    [dict setObject:@(self.pageNum) forKey:@"pageNum"];
+    [dict setObject:@(self.pageSize) forKey:@"pageSize"];
+    [dict addEntriesFromDictionary:self.parmdict];
+    // 追加任务 barrier
+    [self.detailviewModel.requestApartmentAudioCommand execute:dict];
 }
 
 - (HHHomeDetailHeaerView *)detailHeaderView

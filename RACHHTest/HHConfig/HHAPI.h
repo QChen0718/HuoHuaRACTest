@@ -19,4 +19,8 @@
 #define kAudioSingleUrl         @"audio/single.do"
 //音频专辑条目列表
 #define kAudioItemUrl           @"audio/item.do"
+// 首页推荐帖子列表
+#define kHomeRecommendPost      @"circle/bar/homerecommend"
+// 首页banner数据
+#define kHomeBannerUrl          @"home/home/banner"
 #endif /* HHAPI_h */

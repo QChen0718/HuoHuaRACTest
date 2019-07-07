@@ -8,6 +8,7 @@
 
 #import "HHLoginView.h"
 #import "HHLoginViewModel.h"
+#import "HHTabBarViewController.h"
 #import "HHHomeViewController.h"
 @interface HHLoginView ()
 @property (nonatomic,strong)UITextField *phonetextField;
@@ -29,13 +30,17 @@
     [self setuiFrame];
     RAC(self.loginviewModel,phone)=self.phonetextField.rac_textSignal;
     RAC(self.loginviewModel,password)=self.passwordtextField.rac_textSignal;
+    [self.phonetextField.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
+        
+    }];
 }
 - (void)hh_bindViewModel
 {
     [self.loginviewModel.loginCommand.executionSignals.switchToLatest subscribeNext:^(HHLoginModel *user) {
         NSLog(@"%@",user);
         [user saveUser];
-        [self.hh_viewController.navigationController pushViewController:[[HHHomeViewController alloc]init] animated:YES];
+        self.hh_viewController.view.window.rootViewController=[[HHTabBarViewController alloc]init];
+//        [self.hh_viewController.navigationController pushViewController:[[HHHomeViewController alloc]init] animated:YES];
     }];
 }
 - (void)createUI{
@@ -73,6 +78,7 @@
     if (!_phonetextField) {
         _phonetextField = [[UITextField alloc]init];
         _phonetextField.placeholder=@"请输入手机号";
+        _phonetextField.text=@"18311055781";
         _phonetextField.keyboardType=UIKeyboardTypeNumberPad;
         _phonetextField.font =[UIFont systemFontOfSize:15];
     }
@@ -83,6 +89,7 @@
     if (!_passwordtextField) {
         _passwordtextField = [[UITextField alloc]init];
         _passwordtextField.placeholder=@"请输入密码";
+        _passwordtextField.text=@"cq0718";
         _passwordtextField.font =[UIFont systemFontOfSize:15];
     }
     return _passwordtextField;

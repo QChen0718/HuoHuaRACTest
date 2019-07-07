@@ -28,18 +28,10 @@
 
 - (RACSignal *)requestHomeList:(NSDictionary *)dict
 {
-    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+    
         HHURLParameters *parameters = [HHURLParameters hh_urlParametersWithMethod:HHHTTPRequestMethodPost headpath:kAudioUnifiedUrl path:kAudioListUrl parameters:dict loading:YES];
         HHHTTPRequest *request = [HHHTTPRequest hh_requestWithParameters:parameters];
-        [[[HHHttpservice sharedInstance]hh_enqueueRequest:request resultClass:[HHHomeModel class]] subscribeNext:^(HHHomeModel *homemodel) {
-            [subscriber sendNext:homemodel];
-            [subscriber sendCompleted];
-        }error:^(NSError * _Nullable error) {
-            [subscriber sendError:error];
-            [subscriber sendCompleted];
-        }];
-        return [RACDisposable disposableWithBlock:^{}];
-    }];
+    return [[HHHttpservice sharedInstance]hh_enqueueRequest:request resultClass:[HHHomeModel class]];
 }
 
 @end
