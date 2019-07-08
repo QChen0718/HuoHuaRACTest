@@ -29,9 +29,6 @@
 		A1033ACB22D19674001FB316 /* HHAudioTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033AC922D19674001FB316 /* HHAudioTableViewCell.m */; };
 		A1033ACC22D19674001FB316 /* HHAudioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1033ACA22D19674001FB316 /* HHAudioTableViewCell.xib */; };
 		A10654CF22D1EA2C00234E20 /* HHBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A10654CE22D1EA2C00234E20 /* HHBannerModel.m */; };
-		A10654D222D3240C00234E20 /* HHAudioDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10654D122D3240C00234E20 /* HHAudioDetailViewController.m */; };
-		A10654D522D3243A00234E20 /* HHAudioDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10654D422D3243A00234E20 /* HHAudioDetailView.m */; };
-		A10654D822D3248600234E20 /* HHAudioDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A10654D722D3248600234E20 /* HHAudioDetailViewModel.m */; };
 		A1D68AA122C4B90B00D95029 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68AA022C4B90B00D95029 /* AppDelegate.m */; };
 		A1D68AA922C4B90D00D95029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D68AA822C4B90D00D95029 /* Assets.xcassets */; };
 		A1D68AAC22C4B90D00D95029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D68AAA22C4B90D00D95029 /* LaunchScreen.storyboard */; };
@@ -123,12 +120,6 @@
 		A1033ACA22D19674001FB316 /* HHAudioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HHAudioTableViewCell.xib; sourceTree = "<group>"; };
 		A10654CD22D1EA2C00234E20 /* HHBannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHBannerModel.h; sourceTree = "<group>"; };
 		A10654CE22D1EA2C00234E20 /* HHBannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHBannerModel.m; sourceTree = "<group>"; };
-		A10654D022D3240C00234E20 /* HHAudioDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHAudioDetailViewController.h; sourceTree = "<group>"; };
-		A10654D122D3240C00234E20 /* HHAudioDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHAudioDetailViewController.m; sourceTree = "<group>"; };
-		A10654D322D3243A00234E20 /* HHAudioDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHAudioDetailView.h; sourceTree = "<group>"; };
-		A10654D422D3243A00234E20 /* HHAudioDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHAudioDetailView.m; sourceTree = "<group>"; };
-		A10654D622D3248500234E20 /* HHAudioDetailViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHAudioDetailViewModel.h; sourceTree = "<group>"; };
-		A10654D722D3248600234E20 /* HHAudioDetailViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHAudioDetailViewModel.m; sourceTree = "<group>"; };
 		A1D68A9C22C4B90B00D95029 /* RACHHTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACHHTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D68A9F22C4B90B00D95029 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1D68AA022C4B90B00D95029 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -528,8 +519,6 @@
 				A1033AA722CBAA09001FB316 /* HHHomeDetailViewModel.m */,
 				A1033AC222CF47D8001FB316 /* HHAudioViewModel.h */,
 				A1033AC322CF47D8001FB316 /* HHAudioViewModel.m */,
-				A10654D622D3248500234E20 /* HHAudioDetailViewModel.h */,
-				A10654D722D3248600234E20 /* HHAudioDetailViewModel.m */,
 			);
 			path = HHViewModel;
 			sourceTree = "<group>";
@@ -551,8 +540,6 @@
 				A1033AAE22CC87D4001FB316 /* HHHomeDetailHeaerView.m */,
 				A1033ABF22CF47BC001FB316 /* HHAudioView.h */,
 				A1033AC022CF47BC001FB316 /* HHAudioView.m */,
-				A10654D322D3243A00234E20 /* HHAudioDetailView.h */,
-				A10654D422D3243A00234E20 /* HHAudioDetailView.m */,
 				A1033AC822D19674001FB316 /* HHAudioTableViewCell.h */,
 				A1033AC922D19674001FB316 /* HHAudioTableViewCell.m */,
 				A1033ACA22D19674001FB316 /* HHAudioTableViewCell.xib */,
@@ -569,8 +556,6 @@
 				A1033AA122CBA986001FB316 /* HHHomeDetailVC.m */,
 				A1033ABC22CF47A3001FB316 /* HHAudioViewController.h */,
 				A1033ABD22CF47A3001FB316 /* HHAudioViewController.m */,
-				A10654D022D3240C00234E20 /* HHAudioDetailViewController.h */,
-				A10654D122D3240C00234E20 /* HHAudioDetailViewController.m */,
 			);
 			path = HHViewController;
 			sourceTree = "<group>";
@@ -792,15 +777,12 @@
 				A1D68B6222C8A96900D95029 /* HHBaseViewModel.m in Sources */,
 				A1033AA822CBAA09001FB316 /* HHHomeDetailViewModel.m in Sources */,
 				A1D68AAF22C4B90D00D95029 /* main.m in Sources */,
-				A10654D822D3248600234E20 /* HHAudioDetailViewModel.m in Sources */,
 				A1033ABA22CF3E7D001FB316 /* HHTabBarViewController.m in Sources */,
 				A1033A8A22CA3CC6001FB316 /* HHBaseViewController.m in Sources */,
-				A10654D522D3243A00234E20 /* HHAudioDetailView.m in Sources */,
 				A1033AC722CF4BFF001FB316 /* HHAudioModel.m in Sources */,
 				A1D68ADE22C4C20300D95029 /* HHHTTPRequest.m in Sources */,
 				A1033A9222CA4057001FB316 /* HHHomeListModel.m in Sources */,
 				A1033A9B22CB0AE9001FB316 /* MBProgressHUD+Category.m in Sources */,
-				A10654D222D3240C00234E20 /* HHAudioDetailViewController.m in Sources */,
 				A1033AA222CBA986001FB316 /* HHHomeDetailVC.m in Sources */,
 				A1D68AA122C4B90B00D95029 /* AppDelegate.m in Sources */,
 				A1033AC422CF47D8001FB316 /* HHAudioViewModel.m in Sources */,
