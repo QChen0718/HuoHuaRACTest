@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HHAudioDetailViewModel : HHBaseViewModel
-
+@property (nonatomic,readonly,strong)RACCommand *circlrDetailCommand;
 @end
 
 NS_ASSUME_NONNULL_END
