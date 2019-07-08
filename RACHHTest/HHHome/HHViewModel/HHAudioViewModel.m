@@ -47,7 +47,7 @@
 {
     if (!_homeAudiolistcommand) {
         _homeAudiolistcommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-            HHURLParameters *parameters = [HHURLParameters hh_urlParametersWithMethod:HHHTTPRequestMethodPost headpath:kAudioUnifiedUrl path:kAudioListUrl parameters:nil loading:NO];
+            HHURLParameters *parameters = [HHURLParameters hh_urlParametersWithMethod:HHHTTPRequestMethodPost headpath:kAudioUnifiedUrl path:kAudioListUrl parameters:input loading:NO];
             HHHTTPRequest *request = [HHHTTPRequest hh_requestWithParameters:parameters];
            return [[HHHttpservice sharedInstance]hh_enqueueRequest:request resultClass:[HHHomeModel class]];
         }];

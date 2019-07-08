@@ -10,6 +10,7 @@
 #import "HHAudioViewModel.h"
 #import "HHAudioModel.h"
 #import "HHAudioTableViewCell.h"
+#import "HHBannerModel.h"
 #define CELLID @"cellid"
 
 
@@ -20,6 +21,7 @@
 @property (nonatomic,strong)NSDictionary *params;
 @property (nonatomic,assign)NSInteger pageNum;
 @property (nonatomic,assign)NSInteger pageSize;
+@property (nonatomic,strong)HHBannerModel *bannerModel;
 
 @end
 
@@ -41,13 +43,43 @@
 }
 - (void)hh_bindViewModel
 {
-    [self.audioViewModel.homelistCommand.executionSignals.switchToLatest subscribeNext:^(HHAudioModel *model) {
-        [self.sumModelArray addObjectsFromArray:model.list];
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        //帖子列表
+        [self.audioViewModel.homelistCommand.executionSignals.switchToLatest subscribeNext:^(HHAudioModel *model) {
+            [self.sumModelArray addObjectsFromArray:model.list];
+            
+        } error:^(NSError * _Nullable error) {
+            
+        }];
+        [self loadData];
+    });
+    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        //banner列表
+        [self.audioViewModel.homeBannerCommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+            self.bannerModel = (HHBannerModel *)x;
+        } error:^(NSError * _Nullable error) {
+            
+        }];
+        [self.audioViewModel.homeBannerCommand execute:nil];
+    });
+    
+    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        //推荐音频列表接口
+        [self.audioViewModel.homeAudiolistcommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+            
+        } error:^(NSError * _Nullable error) {
+            
+        }];
+        NSMutableDictionary * params = [NSMutableDictionary dictionary];
+        params[@"pageNum"] = @(0);
+        params[@"pageSize"] = @(3);
+        [self.audioViewModel.homeAudiolistcommand execute:params];
+    });
+    //处理请求的数据
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
         [self.tableview reloadData];
-    } error:^(NSError * _Nullable error) {
-        
-    }];
-    [self loadData];
+    });
 }
 - (void)loadData{
     NSMutableDictionary *dict =[[NSMutableDictionary alloc]init];
@@ -82,5 +114,21 @@
     HHAudioTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELLID forIndexPath:indexPath];
     [cell setDataModel:self.sumModelArray[indexPath.row]];
     return cell;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return [UIView new];
+}
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return [UIView new];
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 0.01;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0.01;
 }
 @end
