@@ -20,7 +20,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.homeview];
-    self.navigationItem.title=@"社区";
 }
 
 - (HHHomeViewModel *)homeviewModel
