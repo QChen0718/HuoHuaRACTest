@@ -20,6 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.audioView];
+    self.navigationItem.title=@"首页";
 }
 
 - (HHAudioViewModel *)audioviewModel
