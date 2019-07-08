@@ -30,7 +30,7 @@
 		A1033ACC22D19674001FB316 /* HHAudioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1033ACA22D19674001FB316 /* HHAudioTableViewCell.xib */; };
 		A10654CF22D1EA2C00234E20 /* HHBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A10654CE22D1EA2C00234E20 /* HHBannerModel.m */; };
 		A10654DB22D32A3000234E20 /* HHAudioDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A10654DA22D32A3000234E20 /* HHAudioDetailVC.m */; };
-		A10654DE22D32B4D00234E20 /* HHAudioDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10654DD22D32B4D00234E20 /* HHAudioDetailView.m */; };
+		A10654E122D3302B00234E20 /* HHAudioDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10654E022D3302B00234E20 /* HHAudioDetailView.m */; };
 		A1D68AA122C4B90B00D95029 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68AA022C4B90B00D95029 /* AppDelegate.m */; };
 		A1D68AA922C4B90D00D95029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D68AA822C4B90D00D95029 /* Assets.xcassets */; };
 		A1D68AAC22C4B90D00D95029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D68AAA22C4B90D00D95029 /* LaunchScreen.storyboard */; };
@@ -124,8 +124,8 @@
 		A10654CE22D1EA2C00234E20 /* HHBannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHBannerModel.m; sourceTree = "<group>"; };
 		A10654D922D32A3000234E20 /* HHAudioDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHAudioDetailVC.h; sourceTree = "<group>"; };
 		A10654DA22D32A3000234E20 /* HHAudioDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHAudioDetailVC.m; sourceTree = "<group>"; };
-		A10654DC22D32B4D00234E20 /* HHAudioDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHAudioDetailView.h; sourceTree = "<group>"; };
-		A10654DD22D32B4D00234E20 /* HHAudioDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHAudioDetailView.m; sourceTree = "<group>"; };
+		A10654DF22D3302B00234E20 /* HHAudioDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHAudioDetailView.h; sourceTree = "<group>"; };
+		A10654E022D3302B00234E20 /* HHAudioDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHAudioDetailView.m; sourceTree = "<group>"; };
 		A1D68A9C22C4B90B00D95029 /* RACHHTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACHHTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D68A9F22C4B90B00D95029 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1D68AA022C4B90B00D95029 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -546,8 +546,8 @@
 				A1033AAE22CC87D4001FB316 /* HHHomeDetailHeaerView.m */,
 				A1033ABF22CF47BC001FB316 /* HHAudioView.h */,
 				A1033AC022CF47BC001FB316 /* HHAudioView.m */,
-				A10654DC22D32B4D00234E20 /* HHAudioDetailView.h */,
-				A10654DD22D32B4D00234E20 /* HHAudioDetailView.m */,
+				A10654DF22D3302B00234E20 /* HHAudioDetailView.h */,
+				A10654E022D3302B00234E20 /* HHAudioDetailView.m */,
 				A1033AC822D19674001FB316 /* HHAudioTableViewCell.h */,
 				A1033AC922D19674001FB316 /* HHAudioTableViewCell.m */,
 				A1033ACA22D19674001FB316 /* HHAudioTableViewCell.xib */,
@@ -789,7 +789,7 @@
 				A1033AA822CBAA09001FB316 /* HHHomeDetailViewModel.m in Sources */,
 				A1D68AAF22C4B90D00D95029 /* main.m in Sources */,
 				A1033ABA22CF3E7D001FB316 /* HHTabBarViewController.m in Sources */,
-				A10654DE22D32B4D00234E20 /* HHAudioDetailView.m in Sources */,
+				A10654E122D3302B00234E20 /* HHAudioDetailView.m in Sources */,
 				A1033A8A22CA3CC6001FB316 /* HHBaseViewController.m in Sources */,
 				A1033AC722CF4BFF001FB316 /* HHAudioModel.m in Sources */,
 				A1D68ADE22C4C20300D95029 /* HHHTTPRequest.m in Sources */,
