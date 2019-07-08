@@ -30,7 +30,12 @@
 		A1033ACC22D19674001FB316 /* HHAudioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1033ACA22D19674001FB316 /* HHAudioTableViewCell.xib */; };
 		A10654CF22D1EA2C00234E20 /* HHBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A10654CE22D1EA2C00234E20 /* HHBannerModel.m */; };
 		A10654DB22D32A3000234E20 /* HHAudioDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A10654DA22D32A3000234E20 /* HHAudioDetailVC.m */; };
+<<<<<<< HEAD
 		A10654E122D3302B00234E20 /* HHAudioDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10654E022D3302B00234E20 /* HHAudioDetailView.m */; };
+=======
+		A10654DE22D32B4D00234E20 /* HHAudioDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10654DD22D32B4D00234E20 /* HHAudioDetailView.m */; };
+		A10654E422D3311400234E20 /* HHAudioDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A10654E322D3311400234E20 /* HHAudioDetailViewModel.m */; };
+>>>>>>> white
 		A1D68AA122C4B90B00D95029 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68AA022C4B90B00D95029 /* AppDelegate.m */; };
 		A1D68AA922C4B90D00D95029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D68AA822C4B90D00D95029 /* Assets.xcassets */; };
 		A1D68AAC22C4B90D00D95029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D68AAA22C4B90D00D95029 /* LaunchScreen.storyboard */; };
@@ -124,8 +129,15 @@
 		A10654CE22D1EA2C00234E20 /* HHBannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHBannerModel.m; sourceTree = "<group>"; };
 		A10654D922D32A3000234E20 /* HHAudioDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHAudioDetailVC.h; sourceTree = "<group>"; };
 		A10654DA22D32A3000234E20 /* HHAudioDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHAudioDetailVC.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		A10654DF22D3302B00234E20 /* HHAudioDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHAudioDetailView.h; sourceTree = "<group>"; };
 		A10654E022D3302B00234E20 /* HHAudioDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHAudioDetailView.m; sourceTree = "<group>"; };
+=======
+		A10654DC22D32B4D00234E20 /* HHAudioDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHAudioDetailView.h; sourceTree = "<group>"; };
+		A10654DD22D32B4D00234E20 /* HHAudioDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHAudioDetailView.m; sourceTree = "<group>"; };
+		A10654E222D3311400234E20 /* HHAudioDetailViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHAudioDetailViewModel.h; sourceTree = "<group>"; };
+		A10654E322D3311400234E20 /* HHAudioDetailViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHAudioDetailViewModel.m; sourceTree = "<group>"; };
+>>>>>>> white
 		A1D68A9C22C4B90B00D95029 /* RACHHTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACHHTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D68A9F22C4B90B00D95029 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1D68AA022C4B90B00D95029 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -525,6 +537,8 @@
 				A1033AA722CBAA09001FB316 /* HHHomeDetailViewModel.m */,
 				A1033AC222CF47D8001FB316 /* HHAudioViewModel.h */,
 				A1033AC322CF47D8001FB316 /* HHAudioViewModel.m */,
+				A10654E222D3311400234E20 /* HHAudioDetailViewModel.h */,
+				A10654E322D3311400234E20 /* HHAudioDetailViewModel.m */,
 			);
 			path = HHViewModel;
 			sourceTree = "<group>";
@@ -787,6 +801,7 @@
 				A1D68B6F22C90BC500D95029 /* NSString+SHA256.m in Sources */,
 				A1D68B6222C8A96900D95029 /* HHBaseViewModel.m in Sources */,
 				A1033AA822CBAA09001FB316 /* HHHomeDetailViewModel.m in Sources */,
+				A10654E422D3311400234E20 /* HHAudioDetailViewModel.m in Sources */,
 				A1D68AAF22C4B90D00D95029 /* main.m in Sources */,
 				A1033ABA22CF3E7D001FB316 /* HHTabBarViewController.m in Sources */,
 				A10654E122D3302B00234E20 /* HHAudioDetailView.m in Sources */,
