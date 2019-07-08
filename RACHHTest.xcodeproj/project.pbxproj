@@ -29,6 +29,7 @@
 		A1033ACB22D19674001FB316 /* HHAudioTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1033AC922D19674001FB316 /* HHAudioTableViewCell.m */; };
 		A1033ACC22D19674001FB316 /* HHAudioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1033ACA22D19674001FB316 /* HHAudioTableViewCell.xib */; };
 		A10654CF22D1EA2C00234E20 /* HHBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A10654CE22D1EA2C00234E20 /* HHBannerModel.m */; };
+		A10654DB22D32A3000234E20 /* HHAudioDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A10654DA22D32A3000234E20 /* HHAudioDetailVC.m */; };
 		A1D68AA122C4B90B00D95029 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68AA022C4B90B00D95029 /* AppDelegate.m */; };
 		A1D68AA922C4B90D00D95029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D68AA822C4B90D00D95029 /* Assets.xcassets */; };
 		A1D68AAC22C4B90D00D95029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D68AAA22C4B90D00D95029 /* LaunchScreen.storyboard */; };
@@ -120,6 +121,8 @@
 		A1033ACA22D19674001FB316 /* HHAudioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HHAudioTableViewCell.xib; sourceTree = "<group>"; };
 		A10654CD22D1EA2C00234E20 /* HHBannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHBannerModel.h; sourceTree = "<group>"; };
 		A10654CE22D1EA2C00234E20 /* HHBannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHBannerModel.m; sourceTree = "<group>"; };
+		A10654D922D32A3000234E20 /* HHAudioDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHAudioDetailVC.h; sourceTree = "<group>"; };
+		A10654DA22D32A3000234E20 /* HHAudioDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHAudioDetailVC.m; sourceTree = "<group>"; };
 		A1D68A9C22C4B90B00D95029 /* RACHHTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACHHTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D68A9F22C4B90B00D95029 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1D68AA022C4B90B00D95029 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -556,6 +559,8 @@
 				A1033AA122CBA986001FB316 /* HHHomeDetailVC.m */,
 				A1033ABC22CF47A3001FB316 /* HHAudioViewController.h */,
 				A1033ABD22CF47A3001FB316 /* HHAudioViewController.m */,
+				A10654D922D32A3000234E20 /* HHAudioDetailVC.h */,
+				A10654DA22D32A3000234E20 /* HHAudioDetailVC.m */,
 			);
 			path = HHViewController;
 			sourceTree = "<group>";
@@ -759,6 +764,7 @@
 				A1D68B0922C5E72A00D95029 /* NSString+HHCategory.m in Sources */,
 				A1033ABE22CF47A3001FB316 /* HHAudioViewController.m in Sources */,
 				A1033AAB22CBAA24001FB316 /* HHHomeDetailModel.m in Sources */,
+				A10654DB22D32A3000234E20 /* HHAudioDetailVC.m in Sources */,
 				A1D68B8322C9F0BF00D95029 /* HHHomeViewController.m in Sources */,
 				A1D68B0422C5DFFB00D95029 /* HHResponse.m in Sources */,
 				A1033AB322CDCC88001FB316 /* HHHomeDetailTableViewCell.m in Sources */,
