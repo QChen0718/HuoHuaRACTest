@@ -8,6 +8,20 @@
 
 #import "HHAudioDetailViewModel.h"
 
-@implementation HHAudioDetailViewModel
+@interface HHAudioDetailViewModel ()
+@property (nonatomic,readwrite,strong)RACCommand *circlrDetailCommand;
+@end
 
+@implementation HHAudioDetailViewModel
+- (RACCommand *)circlrDetailCommand
+{
+    if (!_circlrDetailCommand) {
+        _circlrDetailCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+            HHURLParameters *parameters = [HHURLParameters hh_urlParametersWithMethod:HHHTTPRequestMethodPost headpath:kProtocolUrl_Pre path:@"" parameters:@{} loading:YES];
+            HHHTTPRequest *request = [HHHTTPRequest hh_requestWithParameters:parameters];
+           return [[HHHttpservice sharedInstance]hh_enqueueRequest:request resultClass:nil];
+        }];
+    }
+    return _circlrDetailCommand;
+}
 @end
