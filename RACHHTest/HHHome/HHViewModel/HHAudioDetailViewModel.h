@@ -6,7 +6,7 @@
 //  Copyright © 2019 White-C. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "HHBaseViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
