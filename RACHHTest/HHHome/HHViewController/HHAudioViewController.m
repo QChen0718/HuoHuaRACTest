@@ -21,6 +21,7 @@
     // Do any additional setup after loading the view.
     [self.view addSubview:self.audioView];
 }
+
 - (HHAudioViewModel *)audioviewModel
 {
     if (!_audioviewModel) {

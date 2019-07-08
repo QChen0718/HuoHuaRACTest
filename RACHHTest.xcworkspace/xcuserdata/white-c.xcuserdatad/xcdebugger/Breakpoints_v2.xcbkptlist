@@ -6,15 +6,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RACHHTest/HHHttpservice/HHHttpservice.m"
-            timestampString = "584203810.258859"
+            timestampString = "584252818.131528"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "-hh_request:"
             landmarkType = "7">
          </BreakpointContent>
@@ -22,15 +22,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RACHHTest/HHHome/HHView/HHAudioView.m"
-            timestampString = "584203810.258932"
+            timestampString = "584252818.131894"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "-hh_bindViewModel"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RACHHTest/HHHome/HHView/HHAudioView.m"
-            timestampString = "584203810.25931"
+            timestampString = "584252818.131958"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "-hh_bindViewModel"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "-responseCircle:banner:audio:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RACHHTest/HHHome/HHView/HHAudioView.m"
-            timestampString = "584203810.2595561"
+            filePath = "RACHHTest/HHHttpservice/HHHttpservice.m"
+            timestampString = "584252818.132005"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "-hh_bindViewModel"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "-hh_request:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

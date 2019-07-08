@@ -11,6 +11,7 @@
 #import "HHAudioModel.h"
 #import "HHAudioTableViewCell.h"
 #import "HHBannerModel.h"
+#import "HHHomeModel.h"
 #define CELLID @"cellid"
 
 
@@ -22,6 +23,7 @@
 @property (nonatomic,assign)NSInteger pageNum;
 @property (nonatomic,assign)NSInteger pageSize;
 @property (nonatomic,strong)HHBannerModel *bannerModel;
+@property (nonatomic,strong)HHHomeModel *audioModel;
 
 @end
 
@@ -43,43 +45,57 @@
 }
 - (void)hh_bindViewModel
 {
-    dispatch_group_t group = dispatch_group_create();
-    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        //帖子列表
+    //帖子列表
+    RACSignal *circleSignal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
         [self.audioViewModel.homelistCommand.executionSignals.switchToLatest subscribeNext:^(HHAudioModel *model) {
-            [self.sumModelArray addObjectsFromArray:model.list];
-            
+            [subscriber sendNext:model];
         } error:^(NSError * _Nullable error) {
-            
+            [subscriber sendError:error];
         }];
         [self loadData];
-    });
-    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        //banner列表
-        [self.audioViewModel.homeBannerCommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
-            self.bannerModel = (HHBannerModel *)x;
-        } error:^(NSError * _Nullable error) {
+        return [RACDisposable disposableWithBlock:^{
             
         }];
-        [self.audioViewModel.homeBannerCommand execute:nil];
-    });
-    
-    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        //推荐音频列表接口
-        [self.audioViewModel.homeAudiolistcommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
-            
+    }];
+    //banner列表
+    RACSignal *bannerSignal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        [self.audioViewModel.homeBannerCommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+            [subscriber sendNext:x];
         } error:^(NSError * _Nullable error) {
+            [subscriber sendError:error];
+        }];
+        [self.audioViewModel.homeBannerCommand execute:nil];
+        return [RACDisposable disposableWithBlock:^{
             
+        }];
+    }];
+
+    //推荐音频列表接口
+    RACSignal *audioSignal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        [self.audioViewModel.homeAudiolistcommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+            [subscriber sendNext:x];
+        } error:^(NSError * _Nullable error) {
+            [subscriber sendError:error];
         }];
         NSMutableDictionary * params = [NSMutableDictionary dictionary];
         params[@"pageNum"] = @(0);
         params[@"pageSize"] = @(3);
         [self.audioViewModel.homeAudiolistcommand execute:params];
-    });
-    //处理请求的数据
-    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-        [self.tableview reloadData];
-    });
+        return [RACDisposable disposableWithBlock:^{
+            
+        }];
+    }];
+
+    //统一处理多个信号
+    [self rac_liftSelector:@selector(responseCircle:banner:audio:) withSignalsFromArray:@[circleSignal, bannerSignal, audioSignal]];
+}
+- (void)responseCircle:(HHAudioModel *)circle banner:(id)banner audio:(id)audio
+{
+    [self.sumModelArray addObjectsFromArray:circle.list];
+    [self.tableview reloadData];
+    self.bannerModel=(HHBannerModel *)banner;
+    self.audioModel = (HHHomeModel *)audio;
+    
 }
 - (void)loadData{
     NSMutableDictionary *dict =[[NSMutableDictionary alloc]init];

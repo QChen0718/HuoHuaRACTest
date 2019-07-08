@@ -100,9 +100,6 @@ static HHHttpservice * _service = nil;
         NSString *path = request.urlParameters.path;
         NSURL *baseUrl = [NSURL URLWithString:request.urlParameters.headpath];
         _service.securityPolicy.validatesDomainName = NO;
-        
-        //设置baseURL
-//        _service = [self initWithServerBaseURL:[NSURL URLWithString:request.urlParameters.headpath]];
         // 设置token
         [_service.requestSerializer setValue:[HHLoginModel userFromFile].token ?:@"" forHTTPHeaderField:@"token"];
         // 对外显示的版本号
@@ -199,7 +196,7 @@ static HHHttpservice * _service = nil;
             }
             else {
                 /// 请求返回的结果不是成功的
-                [subscriber sendError:responseModel.responseMsg];
+                [subscriber sendNext:responseModel.responseMsg];
                 [subscriber sendCompleted];
             }
         }
