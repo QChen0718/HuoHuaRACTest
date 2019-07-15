@@ -25,8 +25,10 @@
 - (void)addChildViewControllerClick
 {
     HHAudioViewController *homevc=[[HHAudioViewController alloc]init];
+    homevc.title=@"首页";
     [self setupChildVc:homevc title:@"" image:@"buttn_shi_normal" selectedImage:@"buttn_shi_hover" withItemTag:1];
     HHHomeViewController *audiovc = [[HHHomeViewController alloc]init];
+    audiovc.title=@"社区";
     [self setupChildVc:audiovc title:@"" image:@"buttn_she_normal" selectedImage:@"buttn_she_hover" withItemTag:2];
     
     UIViewController *criclevc=[[UIViewController alloc]init];
