@@ -110,6 +110,10 @@
     HHHomeListModel *model = self.sumModelArray[indexPath.row];
     HHHomeDetailVC *vc = [[HHHomeDetailVC alloc]init];
     vc.audioid=model.audiodetail_id;
+    [vc.updateListSubject subscribeNext:^(id  _Nullable x) {
+       //处理列表更新数据
+        NSLog(@"刷新列表");
+    }];
     [self.hh_viewController.navigationController pushViewController:vc animated:YES];
 }
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section

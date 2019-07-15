@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HHHomeDetailVC : HHBaseViewController
 //详情ID
+//更新列表的信号
+@property (nonatomic,strong,readonly) RACSubject *updateListSubject;
 @property (nonatomic,assign)NSInteger audioid;
 @end
 

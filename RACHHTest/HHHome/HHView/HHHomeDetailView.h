@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HHHomeDetailView : HHBaseView
-
+@property (nonatomic,strong,readonly)RACSubject *buybtnsubject;
 @end
 
 NS_ASSUME_NONNULL_END

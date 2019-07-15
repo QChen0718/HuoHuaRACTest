@@ -13,6 +13,7 @@
 #import "HHHomeListModel.h"
 #import "HHHomeDetailTableViewCell.h"
 #import "HHHomeDetailAudioListModel.h"
+#import "HHHomeDetailBuyView.h"
 #define CELLID @"cellid"
 @interface HHHomeDetailView ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableview;
@@ -25,6 +26,8 @@
 @property (nonatomic,strong)HHHomeDetailModel *detailModel;
 //音频详情音频条目模型数据
 @property (nonatomic,strong)NSMutableArray *sumdetailModel;
+@property (nonatomic,strong)HHHomeDetailBuyView *detailbuyView;
+@property (nonatomic,strong,readwrite)RACSubject *buybtnsubject;
 @property (nonatomic,strong)NSDictionary *parmdict;
 @property (nonatomic,assign)NSInteger pageSize;
 @property (nonatomic,assign)NSInteger pageNum;
@@ -47,6 +50,7 @@
     self.sumdetailModel = [[NSMutableArray alloc]init];
     self.frame=HH_MAIN_SCREEN;
     [self addSubview:self.tableview];
+    [self addSubview:self.detailbuyView];
 }
 - (void)hh_bindViewModel
 {
@@ -79,6 +83,19 @@
     [dict addEntriesFromDictionary:self.parmdict];
     // 追加任务 barrier
     [self.detailviewModel.requestApartmentAudioCommand execute:dict];
+    
+    [self.detailbuyView.buysubject subscribeNext:^(id  _Nullable x) {
+        NSLog(@"购买按钮被点击");
+        [self.buybtnsubject sendNext:x];
+    }];
+}
+
+- (RACSubject *)buybtnsubject
+{
+    if (!_buybtnsubject) {
+        _buybtnsubject = [RACSubject subject];
+    }
+    return _buybtnsubject;
 }
 
 - (HHHomeDetailHeaerView *)detailHeaderView
@@ -90,12 +107,18 @@
     return _detailHeaderView;
 }
 
-
+- (HHHomeDetailBuyView *)detailbuyView
+{
+    if (!_detailbuyView) {
+        _detailbuyView = [[HHHomeDetailBuyView alloc]init];
+    }
+    return _detailbuyView;
+}
 
 - (UITableView *)tableview
 {
     if (!_tableview) {
-        _tableview =[[UITableView alloc]initWithFrame:HH_MAIN_SCREEN style:UITableViewStyleGrouped];
+        _tableview =[[UITableView alloc]initWithFrame:CGRectMake(0, 0, HH_SCREEN_WIDTH, HH_SCREEN_HEIGHT-40) style:UITableViewStyleGrouped];
         _tableview.delegate=self;
         _tableview.dataSource=self;
         [_tableview registerNib:[UINib nibWithNibName:@"HHHomeDetailTableViewCell" bundle:nil] forCellReuseIdentifier:CELLID];
